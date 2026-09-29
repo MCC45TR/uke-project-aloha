@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "phase": "preparation",
+  "source_imported": false,
+  "image_built": false,
+  "hardware_tested": false,
+  "workspace": "https://github.com/MCC45TR/uke-linux",
+  "sources": [
+    {
+      "id": "aloha-platforms",
+      "path": "referances/donors/aloha-platforms",
+      "url": "https://github.com/Project-Aloha/mu_aloha_platforms.git",
+      "checkout": "refs/heads/main",
+      "refs": {
+        "refs/heads/main": "8d37e2bfab2f9d959ac0b3d68434e8be4866bf55"
+      },
+      "role": "UEFI source reference; SM7675 support must be proven separately",
+      "phase": "preparation",
+      "history": "full-selected-refs",
+      "redistribution": "review-file-licenses-before-publication",
+      "owner": "uke-project-aloha"
+    },
+    {
+      "id": "aloha-dualboot",
+      "path": "referances/donors/aloha-dualboot",
+      "url": "https://github.com/Project-Aloha/DualBootKernelPatcher.git",
+      "checkout": "refs/heads/main",
+      "refs": {
+        "refs/heads/main": "36edd373e8d0ff2fd620832f0fc5108f7bcbc84f"
+      },
+      "role": "Boot selection mechanism study, not an authorized device operation",
+      "phase": "preparation",
+      "history": "full-selected-refs",
+      "redistribution": "review-file-licenses-before-publication",
+      "owner": "uke-project-aloha"
+    }
+  ]
+}

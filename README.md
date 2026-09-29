@@ -1,21 +1,20 @@
-# Project Aloha integration for Xiaomi Pad 7
+# Project Aloha for POCO Pad X1 and Xiaomi Pad 7
 
-Develop a Uke-specific UEFI platform with diagnostics, GOP, storage, Linux handoff and a verified return to Android.
+A Uke-specific UEFI platform targeting POCO Pad X1 and Xiaomi Pad 7 (`uke`, SM7675). It is intended to connect a controlled recovery workflow to mainline Linux and Fedora while retaining a verifiable route back to Android for each model and firmware profile. Neither model has been boot-tested with project UEFI.
 
-**Status: preparation only.** No project image has been built or tested on a Pad 7. This repository is a component of [Uke Linux](https://github.com/MCC45TR/uke-linux); see its [100-step plan](https://github.com/MCC45TR/uke-linux/blob/main/PLAN.md) and [hardware ledger](https://github.com/MCC45TR/uke-linux/blob/main/DEVICE-STATUS.md).
+[Uke Linux](https://github.com/MCC45TR/uke-linux) · [Platform architecture](docs/ARCHITECTURE.md) · [Boot roadmap](https://github.com/MCC45TR/uke-linux/blob/main/PLAN.md) · [Releases](https://github.com/MCC45TR/uke-project-aloha/releases)
 
-## Next implementation work
+## Platform goals
 
-Resolve pinned Aloha submodules and map SM7675 platform requirements after the recovery foundation is established.
+- Firmware-aware memory ownership, early diagnostics and display output.
+- Input and read-only UFS access before any storage write path.
+- Correct EFI-to-Linux device-tree handoff and ExitBootServices behavior.
+- Explicit Android return, recovery access and selectable Fedora boot profiles.
 
-## Layout
+The upstream Aloha platform tree does not currently provide a Uke target in the revision inspected for this project. A real SM7675 platform implementation is needed; another tablet's firmware image cannot be relabeled for Uke.
 
-- `src/`: project code; large active upstream checkouts use ignored `src/upstream/`.
-- `configs/`, `patches/`, `scripts/`, `tests/`: reviewed configuration, attributed patches, host helpers and test definitions.
-- `docs/`, `manifests/`, `reports/`: architecture, source identities and reviewed evidence.
-- `referances/`: local unmodified reference clones and Git bundles; see its README.
-- `build/`, `artifacts/`: local generated output, excluded from source publication.
+## Downloads
 
-New native tablet tools use C++. Host automation prefers Bash; Python must never ship to or run on the tablet. Upstream kernel/firmware languages remain unchanged. Read [AGENTS.md](AGENTS.md) before contributing.
+**No UEFI image is available yet.** Uke firmware, recovery and boot-path analysis come first. A future candidate will include its source revision, firmware requirements, hashes, known limitations and tested Android-return procedure. Physical boot results will be recorded in the [device status](https://github.com/MCC45TR/uke-linux/blob/main/DEVICE-STATUS.md).
 
-The source plan lists component-relative reference paths. The workspace owns acquisition and archive verification through `scripts/sources.sh`; clone the workspace with submodules to use that orchestration. Reference history and licensing are preserved independently of this repository. The MIT license covers original preparation material, not imported upstream code.
+Upstream EDK II code retains its C and assembly conventions. New native companion utilities target C++; no Python runs on the tablet. Read [AGENTS.md](AGENTS.md) and the source licenses before contributing.

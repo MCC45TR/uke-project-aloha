@@ -1,28 +1,33 @@
-# Project Aloha for POCO Pad X1 and Xiaomi Pad 7
+# Project Aloha for Uke
 
-UEFI platform development for POCO Pad X1 and Xiaomi Pad 7 (`uke`, SM7675).
-The port targets Fedora/Linux boot and return to Android.
+UEFI platform development for POCO Pad X1 and Xiaomi Pad 7 (`uke`, Qualcomm SM7675). The intended boot path covers Linux and a controlled return to Android.
 
-[Uke Linux](https://github.com/MCC45TR/uke-linux) · [Platform architecture](docs/ARCHITECTURE.md) · [Boot roadmap](https://github.com/MCC45TR/uke-linux-docs/blob/main/PLAN.md) · [Releases](https://github.com/MCC45TR/uke-project-aloha/releases)
+**Source status updated 26 October 2026. No bootable Uke UEFI release is available.**
 
-## Status — 13 October 2026
+[Uke Linux](https://github.com/MCC45TR/uke-linux) · [Architecture](docs/ARCHITECTURE.md) · [Source checkpoint](https://github.com/MCC45TR/uke-project-aloha/tree/publish/source-snapshot-20261026) · [Releases](https://github.com/MCC45TR/uke-project-aloha/releases)
 
-No Uke UEFI image is available. Neither model has booted this port. The inspected
-upstream Aloha revision has no Uke target; SM7675 platform support remains to be
-implemented. Current Fedora tablet tests use the stock Android bootloader.
+## Current status
 
-## Remaining work
+Current Fedora tablet testing uses the stock Android bootloader. Neither model has booted this UEFI port. Host tools, EFI components and platform source are separate from a complete Uke firmware implementation.
 
-- Firmware-aware memory ownership, early diagnostics and display output.
-- Input and read-only UFS access before any storage write path.
-- Correct EFI-to-Linux device-tree handoff and ExitBootServices behavior.
-- Explicit Android return, recovery access and selectable Fedora boot profiles.
+The [26 October source checkpoint](https://github.com/MCC45TR/uke-project-aloha/tree/publish/source-snapshot-20261026) publishes the native GPT/FAT32/ESP core, boot-image tools, EFI dispatcher and guarded platform adapters. Its Release host CMake/CTest run passes 12/12 tests. The optional SEC framebuffer test needs the separately prepared pinned libfdt source and was not run in that checkout.
 
-## Downloads
+| Area | Source / test result | Remaining gate |
+|---|---|---|
+| GPT, FAT32 and manager selection | Native host parser, policy and file-boundary fixtures | Actual UFS controller, firmware filesystem and selected manager execution. |
+| Boot-image inspection | Native C++ tooling and host tests | Complete platform entry and physical handoff. |
+| EFI dispatcher and Android return | Guarded component source and earlier component fixtures | Complete firmware integration, ownership restoration and physical return to Android. |
+| SEC/PrePi/platform admission | Bounded memory, entry and framebuffer source | Exact firmware/memory contract and actual Uke startup. |
+| EL2 handoff | Offline firmware/source research | Qualified stock-firmware service, policy, caller state and all-CPU runtime behavior. |
 
-There are no downloadable UEFI builds. A release requires source and firmware
-versions, checksums, installation limits and a tested Android-return procedure.
-Detailed boot tests are recorded in the private
-[device status](https://github.com/MCC45TR/uke-linux-docs/blob/main/DEVICE-STATUS.md).
+Host or generic VM success does not establish Uke firmware execution. No runtime SMC, firmware replacement, partition write or device reboot is performed by this source publication.
 
-Upstream EDK II code retains its C and assembly conventions. New native companion utilities target C++; no Python runs on the tablet. Read [AGENTS.md](AGENTS.md) and the source licenses before contributing.
+## Downloads and remaining work
+
+There are no downloadable Uke UEFI images or accepted Android boot-patching installer ZIPs. A release requires complete platform source/dependency closure, exact firmware compatibility, checksums, validated input/storage/display behavior and a tested recovery/Android-return route.
+
+Preserve stock early firmware. Source from another Qualcomm device is comparison evidence; board memory maps, GPT data, security binaries and calibration are not portable.
+
+Upstream EDK II components retain their C/assembly conventions and licenses. Native companion utilities use C++. No Python runs on the tablet.
+
+Read [AGENTS.md](AGENTS.md), the owning source licenses and the checkpoint's build/implementation documents before extending the port.

@@ -1,5 +1,11 @@
 # Reference archive
 
+The [21 October 2026 Allenwdk Uke review receipt](../manifests/allenwdk-uefi-uke-review-2026-10-21.json)
+records the separate Uke/UniXNU/DarwinBoot source pins, host BootShim check and
+failed full-firmware admission. It supplements research inputs without changing
+the accepted source lock. The complete firmware remains unbuilt and no tablet
+operation was performed.
+
 The [14 October 2026 research inventory](../manifests/research-donors-20261014.json)
 maps local donor checkouts to exact revisions, purpose and verification limits.
 It supplements the archival catalog and does not change an active build lock.

@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "profile_id": "uke-p-global-os2.0.205.0.vozmixm",
+  "admission": "preparation-only",
+  "stock_observation_date": "2026-10-03",
+  "stock_record": "STOCK-ADB-20261003-01",
+  "device": {
+    "product": "POCO Pad X1",
+    "model": "25099RP08G",
+    "soc": "SM7675",
+    "codename": "uke",
+    "variant": "uke_p_global",
+    "sku": "8GB-512GB"
+  },
+  "stock_firmware": "OS2.0.205.0.VOZMIXM",
+  "observed_boot_state": "locked-green",
+  "entry_backend": null,
+  "android_return_backend": null,
+  "physical_ufs_geometry": null,
+  "ram_ownership_map": null,
+  "uefi_executed": false,
+  "physical_trial_admitted": false,
+  "other_variants_inherit_admission": false
+}

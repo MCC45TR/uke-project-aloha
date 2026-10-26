@@ -1,0 +1,298 @@
+{
+  "schema_version": 1,
+  "record_id": "ALOHA-SEC-20261012-01",
+  "generated_utc": "2026-10-12T14:02:26Z",
+  "inventory_scope": "selected project files, source imports, host tool identities and scoped logs; not full offline dependency closure",
+  "input_profiles": {
+    "schema_version": 1,
+    "role": "raw-sec-entry-probe",
+    "installable": false,
+    "full_uefi_firmware": false,
+    "probe_sha256": "c004a0a539f3c710ad774e7ef86dc03ac6e7f832df8187a4653b607fc89e9c2b",
+    "profiles": {
+      "fedora-0242": {
+        "sha256": "b32bad9905a7a0db686e1c45623da1c093cdaaafa81c8e8544a63cb17b7d5f98",
+        "original": "Fedora pair-0242a33799d12541, Linux 7.2.9-senemos-uke",
+        "physical_baseline": "Original input booted on the owner's Uke; patched output is untested"
+      },
+      "os3-global": {
+        "sha256": "efdee1d4e1acd7f6e77615330dbcb045caeeccad8568d89fa6abd627f606e77f",
+        "original": "Global OS3.0.303.0.WOZMIXM stock boot.img",
+        "physical_baseline": "Offline development input only; not the installed Android 17 firmware"
+      }
+    }
+  },
+  "source_imports": {
+    "review_date": "2026-10-12",
+    "aloha": {
+      "url": "https://github.com/Project-Aloha/mu_aloha_platforms",
+      "main_commit": "7c81a0c77fbf77bc28a305e1e9d075f53648f93b",
+      "uke_target_found": false,
+      "mu_basecore_gitlink": "562c0927ef7bfc65d26d9caf322e569ccb23b6a9"
+    },
+    "direct_uke_linux": {
+      "url": "https://github.com/ztsubaki/uke-linux",
+      "commit": "32cad9ccd383ff4b37d8a5e7f88a8bfdcc07307e"
+    },
+    "direct_uke_fedora": {
+      "url": "https://github.com/linuxgamer/uke-fedora",
+      "commit": "cf4f9317a7fef3e9bdddc36bedcb257fa51b0994",
+      "latest_change": "README.md only; not a new UEFI driver"
+    },
+    "imports": [
+      {
+        "root": "public-mipi-sys-t-370b5944c046bab043dd8b133727b2135af7747a",
+        "url": "https://codeload.github.com/MIPI-Alliance/public-mipi-sys-t/tar.gz/370b5944c046bab043dd8b133727b2135af7747a",
+        "archive": "mipisyst-370b5944c046bab043dd8b133727b2135af7747a.tar.gz",
+        "sha256": "9fda3b9a78343ab2be6f06ce6396536e7e065abac29b47c8eb2e42cbb4c4f00b",
+        "purpose": "Exact Mu gitlink required by MdePkg DEC includes; no MIPI trace library is linked"
+      },
+      {
+        "root": "dtc-7a1e017926004ecff5fce62d62d42ce9f3e00082",
+        "url": "https://codeload.github.com/dgibson/dtc/tar.gz/7a1e017926004ecff5fce62d62d42ce9f3e00082",
+        "archive": "dtc-7a1e017926004ecff5fce62d62d42ce9f3e00082.tar.gz",
+        "sha256": "080ad0a4e423c5761adb05764ffc61846fa4a1e93af993271b351f5ba4802f83",
+        "purpose": "Read-only libfdt in SEC; writable libfdt on the host for synthetic fixtures"
+      },
+      {
+        "root": "mu_basecore-562c0927ef7bfc65d26d9caf322e569ccb23b6a9",
+        "url": "https://codeload.github.com/microsoft/mu_basecore/tar.gz/562c0927ef7bfc65d26d9caf322e569ccb23b6a9",
+        "archive": "mu-basecore-562c0927ef7bfc65d26d9caf322e569ccb23b6a9.tar.gz",
+        "sha256": "3c7b251368bc237c79556aa567f7d43e62c48169491e0c01e2ded0735e497d15",
+        "purpose": "Current Aloha Mu headers and selected BaseTools/INF/DEC/DSC component integration; not a complete firmware build"
+      }
+    ]
+  },
+  "source_sha256": {
+    "include/uke/boot_core.h": "4b380cc06c34905b0eac2cf97a060eab603c650db3dde27cf000b625df443688",
+    "include/uke/boot_image.hpp": "deee75c1965ceaf5c8c2100f683d94833a037437c63b28bf0fbdb24456d4e0fc",
+    "include/uke/linux_handoff.h": "3ed659b94b034423ab62487ba4f293a71389efa3197dc4c5c1b16aeef446edf3",
+    "include/uke/platform_boot.h": "ecf4e9958e5901f9b203a5bff06ff2c9a92fc56e5bb4d4534d1f4e32bda05395",
+    "include/uke/raw_entry.h": "5e1c16ca943489a87cc9ee703b08c9c4f0fd2f1c902078a6636a91e1fce28dab",
+    "include/uke/sec_probe.h": "5cbbf90d0638893599c2cb16a093329ce0c140bdc60d6d3a79812260b7af9ff7",
+    "scripts/audit-source-closure.sh": "e441495583daa0b4909fe0d22cc9b7db8dd9749b42d8f4ab550d113497693dbf",
+    "scripts/build-android-continuation.sh": "cb2385cf5ffedc1043a94283851942a1e915306dd8546c8d41027797f595437e",
+    "scripts/build-arm64-boot-tool.sh": "16f47da575bb5c6b145aa5084c5b52b38d880f34e3f318c99fe95312c1aea7b0",
+    "scripts/build-efi-dispatcher.sh": "38ca1de2284569d4119f61b69567a472a12347d1fa04f7496fcd4f3d8fc83fab",
+    "scripts/build-efi-probe.sh": "478be943c0309da307c14bb3406be4af1848bada79645aeb197dd88017cabdb6",
+    "scripts/build-linux-handoff.sh": "d7b0095b44890efbb7824ecfdd9d2098069a33c86fadc1be72f5f0ce76fcaf6a",
+    "scripts/build-mu-integration.sh": "1326e6f9a0de34d8d0bb5d0756163149f183176d357722f1c13af950efe787af",
+    "scripts/build-sec-probe.sh": "7c50ed984ca1704fd62b0fb192326748c44568912d9ad3654ff6d9b07e728b2d",
+    "scripts/check-android-continuation.sh": "1412bf6ca5ae737808966d78f2a7f41dd0c0f5f0bed5e07f2d85dec8a6eb9a40",
+    "scripts/check-arm64-core.sh": "e05cf5e7088130d7584242dd6a9c91314bae39ab2f97523690ecb54f4479c895",
+    "scripts/check-boot-installer-readiness.sh": "622ec1a0c7a8fd936a1420b4272dd9f6e4b7d811feeac8cd87861092c40dbfb8",
+    "scripts/check-efi-dispatcher-host.sh": "325e1ef8b1ac323c9451f7fa381ad64ba0c11b0b4f639832a5c13898b0a461f5",
+    "scripts/check-efi-return.sh": "d9463ebbb02e32a7c078f707dedacdcb23bad00a192f2cf18ec39d557e29ce02",
+    "scripts/check-mu-integration-system.sh": "c72db0cc9433bea4b71b84925b50096f099a2383461ce9eb8020fa5af420e909",
+    "scripts/check-sec-entry.sh": "bb9b249fb56b8ddc0891a887ae0330e57fdf24bd0302b73c5eb3bbf42516e67c",
+    "scripts/check-sec-probe-system.sh": "391321606c50549b57244e78d783e5a8d91de2886169a43fb2f78691d495b828",
+    "scripts/check-ufs-read-only.sh": "696b78cd8fd7f3a7c86cc88880b971728a78062423022f7214820e30b2ca76e7",
+    "scripts/make-sec-test-image.sh": "f36dc03abd08c49964d7a7bc173929a00afacd7d7bcea6950da7c1d81b5e7f48",
+    "scripts/package-sec-probe.sh": "2265b79676ffdb25733e903d0b4ab8914617f9df30ac64bb64ff279d2b4a2b53",
+    "scripts/prepare-sec-probe-sources.sh": "26f6698982b9bee7b4472f88b00f1a8dc89a5cd32150ffbba8b4ec248b573d13",
+    "scripts/record-build-evidence.sh": "8ba1c49a1b38d92f88bc4ac008fdeaf972af2876d78d697f7c2f66ec595b366b",
+    "scripts/record-entry-build-evidence.sh": "dfe623fe19b0f405d98c574568cb25205b402b345f35641db361dfef455ad8f4",
+    "scripts/record-platform-build-evidence.sh": "4f379ae9d9ec1097272536bffd836af29e67e6c5daca4c605a3f315153294bb7",
+    "src/boot/AndroidContinuation.S": "6e4ea8d91e4f0c67363f28f0837497f0fcace943856046eb398430a5f7ff012e",
+    "src/boot/boot_image.cpp": "b52b811068184feccacdacc1ef1cf4b804eb9df744ea59e784a565790efdaace",
+    "src/core/buttons.c": "9202b54e2570eee4ebf096df63bdbb0f8e6d1e046b6c8102a122d5b355680950",
+    "src/core/dispatch.c": "236b05eaf5172f53b81bacddc5cdd5e7255175f7d76d837af037c57050154663",
+    "src/core/fat32.c": "531f1848b9652998ed1e377982e472dfe770e60e19c1eceaf56c511c94510429",
+    "src/core/gpt.c": "4e5c87d39be5f3bd52738632eebfcc5a728f1c62e65c3b4f78153e9a7ad6ed38",
+    "src/core/policy.c": "42154bbad1a121bd390169cbbce18b250c988981722a3723c2f75a5ad1e66c35",
+    "src/core/sha256.c": "6f2be12c3152e08a5205fefe9a8947349b6749b4b62fc75fed976d79ad3de3e5",
+    "src/host/boot_tool.cpp": "db549939f5c7bfd755251ffca812befa70a7d0967e4992257c0140a6bd6b6f23",
+    "src/host/esp_inspect.cpp": "78460eb422a97e9e09b5b1c822d6adce910442e0dc042d70930322a2e4fc2094",
+    "src/platform/UkePlatformPkg/AndroidReturn/ExitServices.c": "154cee9e6b0053d7ceaf09fbd7fced5d87f24ba8fe0fa15211fdfa875ef54d91",
+    "src/platform/UkePlatformPkg/AndroidReturn/ResumeRaw.S": "9a9e56db821b20afcc3b70f349d92d08f7be3ca0a6d4d4521cc4b21747f4f1fc",
+    "src/platform/UkePlatformPkg/AndroidReturn/ReturnTransaction.c": "be672c877776bbfb257bd19fe9734d683cddc82829197c4e1d0349f4237eff89",
+    "src/platform/UkePlatformPkg/AndroidReturn/UkeAndroidReturnLib.inf": "f78881b3af9eadd844f1251dc118fd98bd424bda4b2e65afebe08a180766129a",
+    "src/platform/UkePlatformPkg/BootDispatcher/BootDispatcher.c": "96e13607b90e11f3e77e9fb203800442d62b9fb1a5b55af48af455eceb8d2ae4",
+    "src/platform/UkePlatformPkg/BootDispatcher/BootDispatcher.inf": "e565b5df828bd8fcec46d002a7aa7c44f7cc0671d6d004dc1f4b009888569967",
+    "src/platform/UkePlatformPkg/Include/Protocol/UkeBootPlatform.h": "ce1f1b5f2f50e80fe9944135691aac9a6a4a7bf1b1a16b4fa8af7fe65514390a",
+    "src/platform/UkePlatformPkg/Include/UkeAndroidReturn.h": "c20d7e333b17ef41f9bc9fb5903c1cee64a81f5848182771632d63b53abb709d",
+    "src/platform/UkePlatformPkg/Include/UkeSecEntry.h": "e9f47243e1862c482b736589112f665b667ef4d302ce3e273e0e065cb799095f",
+    "src/platform/UkePlatformPkg/Include/UkeUfsReadOnly.h": "aeeb4a5df3f39976b54f2b82e40dd126f020e011ca1173e9a4c4d31934db0a19",
+    "src/platform/UkePlatformPkg/PrePi/MemoryPlan.c": "f204db4c10cc280a2b25c4b78ee738c340ea63e934a2d78e608dda5b6aba0bfa",
+    "src/platform/UkePlatformPkg/README.md": "cb860c5d47be809d99d4db005275b1d293f899010a5455c80bd59338b39dab66",
+    "src/platform/UkePlatformPkg/Sec/CaptureEntry.S": "e3803fd5fc65e45141d7947ba9ba0a98b7eb3968ac3063e94978d9d382ee9644",
+    "src/platform/UkePlatformPkg/Sec/EntryAdmission.c": "3951c472cc22c72883f2885e2c26a4423eb9dc9c5d182b99333bbc38ad75a5ff",
+    "src/platform/UkePlatformPkg/Sec/FramebufferAdmission.c": "39f9da98d683b0095e5b0504d6e5caaacd38638eaf536bf81aa2220a7be6cdec",
+    "src/platform/UkePlatformPkg/Sec/Probe.lds": "ee7ebc718da4302158ea1109a37041e6f60296d86ba9bc8a75df6c3b18c1b6cc",
+    "src/platform/UkePlatformPkg/Sec/ProbeEntry.S": "cf95f207b2afc7d89bff7fbf73695be2cb3592eb3a903ba709b07d0e8d160ebd",
+    "src/platform/UkePlatformPkg/Sec/ProbeMain.c": "14f3cefe77af302b51a1469707bf559d59cdcd545df3f907a377c87b429e850c",
+    "src/platform/UkePlatformPkg/Sec/ProbeMemory.c": "fdbff7c61ebc8c48b1ef94b399ebf065142f43a81e5acf7f5aa7cff52b078b32",
+    "src/platform/UkePlatformPkg/Sec/UkeSecEntryLib.inf": "62776a7b03fd849621fecac4073bc7bd4904ae0daa02893dbdd4de5b4119cefd",
+    "src/platform/UkePlatformPkg/UfsReadOnly/UfsReadOnly.c": "0d57d08253038f67cf64ee500beedf48a0ced7b3ac8b2a93a6b71703a2a8936b",
+    "src/platform/UkePlatformPkg/UfsReadOnly/UfsReadOnly.inf": "f1d6f1bd02a7d199bab2b74da97376671a5068487ec2e90b2568d94a0a34fc59",
+    "src/platform/UkePlatformPkg/UkeBringup.dsc": "858de3906386c3c6204b249bb59edf72b52cdb7a14d423517e58199eac759347",
+    "src/platform/UkePlatformPkg/UkePlatformPkg.dec": "3e160528efdba8c09fcfc2751b7eeb80075d19a151227e499b5190b682a16a48",
+    "tests/MuDispatchSmoke.inf": "247e579275c497f67160c8aad25e12e9390b7878d11670b31810039791565b72",
+    "tests/android_continuation_smoke.S": "f6e6be84be4f5bd70ecdc092d429b2dce0dc199ac6d331268536962839425652",
+    "tests/arm64_smoke.cpp": "92cdcb7e0792490b4aa52746f7ba9aff347609c89ef646530779ece0a1c8c5c3",
+    "tests/boot-tool-files.sh": "d4d214f8cd701342b62e76473372562208960375508adf36feb9d9fd28d27a6a",
+    "tests/boot_image_tests.cpp": "b739e88a84b63e953db600fe5aa804f4660f32a206868a39ad0cfe25d3e0bdf9",
+    "tests/core_tests.cpp": "54802910bb7bd7b8c102b6d44bb76f9ee958dc9a244d2b06d8f1d93f36b25107",
+    "tests/dispatch_tests.cpp": "cb3a457006d2074249d64c246de0e937b42632e40c5a8480886a00408b4278b3",
+    "tests/efi_dispatch_tests.c": "9d54577d39872898f11ac62841d11e46a497c6e36e5e555d1f1ffb3b9f4efa40",
+    "tests/efi_return_tests.c": "49300d0ef382d594c7a32ac176bc96e7fed3e17c00aba43ad9de8e791773e639",
+    "tests/esp-roundtrip.sh": "4b8a2d848da940391bf1e4fa2d8564db6fced9b29eacb804a489830901786526",
+    "tests/fixture_disk.cpp": "22c9d0c74b1378ddcfc4a1855c5909699726069a482a7868021e701838b6e3cc",
+    "tests/inspect-files.sh": "5e0f57160ce367df276f80e789b58fc12c5318538c544dc9c0a57f5ac687d07d",
+    "tests/linux-memory-map.cpp": "35fbdcb5bb837ccb19c23c7cdffa8595660a3db185b304637d4018290f728807",
+    "tests/mu_dispatch_smoke.c": "0d3ab5a705c295939c22cecb3f11cfd8965c95ec76cca17aaa70373b7106b76e",
+    "tests/os3-boot-roundtrip.sh": "af1790823428c3ff4dbbcb5d99d5ef515c2cee025b97f49d2e70ae96e8dbe730",
+    "tests/platform_boot_tests.cpp": "1cc080a9eaf7a824cbefdd87becf11a597ad2d6620f226a49d7009ce0adaaca8",
+    "tests/raw_resume_smoke.S": "ba479444aa6755fc42dff6fbf02ea411810553a48351b33b22a663c754c95a0f",
+    "tests/sec-probe-files.sh": "61a8b2fdb2ead3d4806323610294c0b7603680bfc12a8a1db69b826a57053cd8",
+    "tests/sec_framebuffer_tests.cpp": "cc2e0befac05de871469e8f30f11e7172490b6945b001aa2d3b67cfea4318055",
+    "tests/sec_probe_system.S": "121bc9bf9f3617062212719343ba085359bbc86ca3111dedcfb75e0f3d45b858",
+    "tests/ufs_read_only_tests.c": "7dd595d3e52488c557bc8401ab1fc77a3fe4f1789b8fcf6e4457a1dc097caa64",
+    "CMakeLists.txt": "73674805d58588639eef75405ee962bcec006196907d7087abc4d68976c93548",
+    "UkeBootCorePkg.dec": "20aab3b7ab34c834da5c33a67aa02025fb3e3624f3f3ac755e4e25c9b36cde86",
+    "profiles/sec-probe-2026-10-12.json": "9baca4ba9e243ac1621dc97fdaeea2528be657b7d7ae3399e6b16c99a2ea98eb",
+    "manifests/sec-probe-sources-2026-10-12.json": "c5391f5cdc2d01df67dc3d84080b1676bf808fd29a90ddb9135f97a768ec616a"
+  },
+  "tool_inputs": {
+    "clang_revision": "clang-r547379 / LLVM b718bcaf8c198c82f3021447d943401e3ab5bd54",
+    "clang_sha256": "55d80d777d85327543868817fb836231691eae2e13030ab31a01a769a820bf2f",
+    "ld_lld_sha256": "55bfa2be5af6af9a3d9a17e310c501c0aca10f5431649988ed0a9a233c911652",
+    "lld_link_sha256": "55bfa2be5af6af9a3d9a17e310c501c0aca10f5431649988ed0a9a233c911652",
+    "host_cxx_version": "c++ (GCC) 16.2.1 20260819 (Red Hat 16.2.1-2)",
+    "host_cxx_sha256": "d43227c181347687c224da7c1b8e9db756c6f24a43c810c2d40f0dfb266e6f6f",
+    "mu_host_python_version": "Python 3.13.16",
+    "mu_host_python_sha256": "60414e94d7722fbdaedac9bf1f576118828305011e419329f56db7d13e49fef2",
+    "host_uuid_devel_rpm_sha256": "10cdaaef2d196edc3f56ef2311f92cf28cb3b50972da12689be4ada3c8f2d8f5",
+    "host_uuid_runtime_sha256": "ec79a9823b6ebab98d80f3fa2df411ff54a5e338a5764f696018589568ef7d3e",
+    "qemu_container": "localhost/uke-qemu-console-host:20261006",
+    "qemu_container_id": "9a044f1e709a13ab768bfad155ce969e5ae637ea2378b7277fbc2fad358daaf6",
+    "arm64_runtime_sha256": {
+      "libc++.a": "bd9057c31ea8b3d35d4fcdd9daff7609d9e68693fdf3dd765122bcc654518ad7",
+      "libc++abi.a": "8712896e96f221a02c61c15c21a79abb6faa6da9f0b1da0e2cb5614f10ae3755",
+      "libunwind.a": "f2d6904c6e7363af140b9d712d97c103ab48201ebb407cf2c839347e580a2c63",
+      "libc.a": "538f011cf169b08a5d8371beb1677624cac4ba40ee83a6dadd57e111a8add944",
+      "compiler_rt_builtins": "8cc2c4a7b35b2faa8c300d870adb11296a37f4f5ab62713281b096046d849d6e"
+    }
+  },
+  "artifacts": [
+    {
+      "path": "build/sec-probe/UkeAlohaSec.bin",
+      "sha256": "c004a0a539f3c710ad774e7ef86dc03ac6e7f832df8187a4653b607fc89e9c2b",
+      "bytes": 45056
+    },
+    {
+      "path": "build/entry-20261012/uke-boot-tool",
+      "sha256": "6ce26de2c28008bd6ebdc6d64de86d648cd04b6c2e26b6b8739554115a1bd12f",
+      "bytes": 50216
+    },
+    {
+      "path": "build/arm64-boot-tool/uke-boot-tool",
+      "sha256": "d159e238706ed03a6ce2eb2ef1b855a04c4a23add664feb193513668f2ebade9",
+      "bytes": 309312
+    },
+    {
+      "path": "build/sec-probe/private/uke-aloha-sec-fedora-0242.img",
+      "sha256": "2879a34e3d7881e4c52db313214905317778afc1644d0db70d4af4c75c7cf128",
+      "bytes": 100663296
+    },
+    {
+      "path": "build/sec-probe/private/uke-aloha-sec-os3-global.img",
+      "sha256": "b2ad1e77c7d24af7c30f8f98b2ca264df44524955cf025491b5ab3af0ba6afbe",
+      "bytes": 100663296
+    },
+    {
+      "path": "build/mu-integration/Build/RELEASE_CLANGPDB/AARCH64/UkeBootDispatcher.efi",
+      "sha256": "230d8d6a7734a7a4c4c727439d994aff92de4dad3dafd541738341a1db24e099",
+      "bytes": 11776
+    },
+    {
+      "path": "artifacts/uke-aloha-sec-probe-20261012.zip",
+      "sha256": "5e89ddca832d2396a1594e8debf4af976f968bb941be6f439a0df4ae5af0b67d",
+      "bytes": 68109
+    },
+    {
+      "path": "build/mu-integration/Build/RELEASE_CLANGPDB/AARCH64/src/platform/UkePlatformPkg/Sec/UkeSecEntryLib/OUTPUT/UkeSecEntryLib.lib",
+      "sha256": "dd7d0c73542b4835b742fdc64442949d93f2ef99e676548e3e571db4315e502d",
+      "bytes": 19952
+    },
+    {
+      "path": "build/mu-integration/Build/RELEASE_CLANGPDB/AARCH64/src/platform/UkePlatformPkg/UfsReadOnly/UfsReadOnly/OUTPUT/UkeUfsReadOnlyLib.lib",
+      "sha256": "b4e59176ea35bde1707b2bb51db53f3f222d5bc275fc357b321b40f5fb619947",
+      "bytes": 25232
+    },
+    {
+      "path": "build/mu-integration/Build/RELEASE_CLANGPDB/AARCH64/src/platform/UkePlatformPkg/AndroidReturn/UkeAndroidReturnLib/OUTPUT/UkeAndroidReturnLib.lib",
+      "sha256": "f36d6d8797bd90814949bf88a9d7d60c87d16afc317c278d09a878af8b3794fc",
+      "bytes": 28896
+    }
+  ],
+  "receipt_logs_sha256": {
+    "build/sec-probe/bundle-checks.log": "85ac247d311b99790807c3305524ca6eff85e9e29be1cb4a1045adb306060ce9",
+    "build/sec-probe/codec-arm64.log": "31a49e5c1ee35fbaaf46a389459291e7bb9d8fe663d6315215fa9fe6cabc26b8",
+    "build/sec-probe/codec-native.log": "31a49e5c1ee35fbaaf46a389459291e7bb9d8fe663d6315215fa9fe6cabc26b8",
+    "build/sec-probe/efi-return-fresh.log": "a855b973d6f818b00819bd671c95b6a42c4441d4a5d8ed17a21dff9354681ec4",
+    "build/sec-probe/fedora-arm64-files.log": "0b4353ee91f600310ff2217f7f4dcb7ca102a55fa476e9d4a5fd37a765c1036d",
+    "build/sec-probe/fedora-files.log": "0b4353ee91f600310ff2217f7f4dcb7ca102a55fa476e9d4a5fd37a765c1036d",
+    "build/sec-probe/framebuffer-native.log": "af9e408c4b5ecb0c4756404c9025678676c7c6349aa2eacfffa1966ef1172be6",
+    "build/sec-probe/installer-readiness.log": "b439ad8d57c52ccaded0df5c6a6e423b27923844b54780eaca824e48897e1bb7",
+    "build/sec-probe/os3-files.log": "c38d2848d88e30bd7a6eac67bf45fb16dbccb727d2197167aca40b1373118e61",
+    "build/sec-probe/os3-legacy-arm64.log": "f3311dd1d87fe060a64bba76bc2a05ea8e44e66938ecd2f53069b746aa655355",
+    "build/sec-probe/os3-legacy-native.log": "f3311dd1d87fe060a64bba76bc2a05ea8e44e66938ecd2f53069b746aa655355",
+    "build/sec-probe/package.log": "adc81486b1a943e8995a6e13565b13724b26f154e3a4f7900bb0c63fd28370b7",
+    "build/sec-probe/qemu-host-inputs.log": "00d6b2bdbc5ffb96d481c31c1dc205ca5bf4be080966a5bfe1a00c96f58976e2",
+    "build/sec-probe/release-tests.log": "b12e4bad60fdb988f368b37e08a461d6e5fec25ec60474ad2acf7b25284672fb",
+    "build/sec-probe/sanitizer-tests.log": "3e3f8a0c0f6904d1f35eeec694eea6ec11d2c7fb33b2841aa8a6d137ead26c8a",
+    "build/sec-probe/source-imports.log": "f2c1e45876cd67d3380addf79606379ffe0b01d8a6aac5487c03b20b86abf5fe",
+    "build/sec-probe/system-checks.log": "cb6ad263a0509c95705e120bac1b7af291305205b5d50a8ff1158792dcd93485",
+    "build/sec-probe/ufs-fresh.log": "599a514f5b2e16683f66dd48035ff78919d16964fb2ada1526beece3c6d7f681",
+    "build/sec-probe/system/branch-off.log": "02c89103b53843ab6f2d1229ced9c5ff9e9301ba6c9cab66a8f43033cf914743",
+    "build/sec-probe/system/branch-on.log": "67409c920a4cd8e41abcbddfb12325bc69f0503cea589aa0031b1527fa9ac4e5",
+    "build/sec-probe/system/mz-off.log": "02c89103b53843ab6f2d1229ced9c5ff9e9301ba6c9cab66a8f43033cf914743",
+    "build/sec-probe/system/mz-on.log": "67409c920a4cd8e41abcbddfb12325bc69f0503cea589aa0031b1527fa9ac4e5",
+    "build/sec-probe/system/foreign-off.log": "39b38f345b0505ef41abb6ba37c4992f844506bfa7ef212c0d74c8a639d6d8e0",
+    "build/mu-integration/integration-build.log": "e8b8e8949f7f9f55f579a1891b62699a4b4e2fffc5ddf217f35470a4dbfa24f2",
+    "build/mu-integration/basetools-build.log": "5a4ae377949d899e3e89ae56dd57d099bdda8b1bcedea3b7123aa5eb2845ac7d",
+    "build/mu-integration/system/present.log": "d22e795c80fd1fa4e2d4fda882ce6b8a07ee6c5b7b30ce4273c67d455faf8201",
+    "build/mu-integration/system/absent.log": "830118a84c38b99976c921f60e6bf1c16b9dc213329f6936bea342e1e62f2cb0",
+    "build/sec-probe/retained-fdt.log": "e92be6081ab574451a4ce77097be67f28f86b9e653af834136bf763069ad9a96",
+    "build/sec-probe/documentary-quality.log": "1cc6050890225b5e2870802a9cde491b34e7a30a83e83c562b511a103788ec67"
+  },
+  "checks": {
+    "release_ctest": "12/12",
+    "sanitizer_ctest": "12/12; C++ vptr disabled",
+    "codec_native": "93",
+    "codec_qemu_user": "93",
+    "framebuffer_native": "37",
+    "retained_private_fdt": "admitted read-only; not redistributed",
+    "privileged_probe_qemu_system": "5/5; actual EL1/EL2, branch/MZ and foreign-FDT bypass",
+    "mu_component_dsc": "four Uke components and separate EFI test application",
+    "actual_generic_efi": "2/2; missing-provider refusal and missing-image control",
+    "ufs_mock": "89",
+    "efi_exit_mock": "136",
+    "sec_probe_fedora_native_file_controls": "exact restore + 8 rejections",
+    "sec_probe_fedora_qemu_user_file_controls": "exact restore + 8 rejections",
+    "sec_probe_os3_native_file_controls": "exact restore + 8 rejections",
+    "legacy_os3_native_controls": "8/8",
+    "legacy_os3_qemu_user_controls": "8/8",
+    "extracted_bundle": "two exact profiles and 5 rejection controls",
+    "installer_readiness": "unavailable; expected exit 3",
+    "documentary_quality": "passed; 58 8D cases, FMEA structure; no product effectiveness"
+  },
+  "known_build_limitation": "Mu RELEASE optionally copies absent PDB files; upstream ignores that copy error; EFI output independently inspected and executed",
+  "raw_sec_probe_built": true,
+  "component_dsc_built": true,
+  "actual_efi_services_scope": "generic QEMU firmware only",
+  "complete_uke_firmware_built": false,
+  "full_dsc_fdf_fd_build": false,
+  "uke_platform_provider_present": false,
+  "controller_phy_executed": false,
+  "post_firmware_android_boot": false,
+  "development_zip_built": true,
+  "installable_zip_built": false,
+  "copr_firmware_uploaded": false,
+  "physical_device_operation": false,
+  "stock_image_redistributed": false,
+  "private_fdt_redistributed": false,
+  "python_runtime_payload": false,
+  "archive_complete": false
+}

@@ -1,0 +1,22 @@
+# SPDX-License-Identifier: MIT
+[Defines]
+  INF_VERSION = 0x0001001B
+  BASE_NAME = MuDispatchSmoke
+  FILE_GUID = e5e2f52a-7db8-4c7f-8d0a-5b1d80d9e239
+  MODULE_TYPE = UEFI_APPLICATION
+  VERSION_STRING = 0.1.0
+  ENTRY_POINT = MuDispatchSmokeEntry
+
+[Sources]
+  mu_dispatch_smoke.c
+
+[Packages]
+  MdePkg/MdePkg.dec
+
+[LibraryClasses]
+  UefiApplicationEntryPoint
+  DevicePathLib
+  MemoryAllocationLib
+
+[Protocols]
+  gEfiLoadedImageProtocolGuid

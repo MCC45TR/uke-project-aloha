@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "role": "raw-sec-entry-probe",
+  "installable": false,
+  "full_uefi_firmware": false,
+  "probe_sha256": "c004a0a539f3c710ad774e7ef86dc03ac6e7f832df8187a4653b607fc89e9c2b",
+  "profiles": {
+    "fedora-0242": {
+      "sha256": "b32bad9905a7a0db686e1c45623da1c093cdaaafa81c8e8544a63cb17b7d5f98",
+      "original": "Fedora pair-0242a33799d12541, Linux 7.2.9-senemos-uke",
+      "physical_baseline": "Original input booted on the owner's Uke; patched output is untested"
+    },
+    "os3-global": {
+      "sha256": "efdee1d4e1acd7f6e77615330dbcb045caeeccad8568d89fa6abd627f606e77f",
+      "original": "Global OS3.0.303.0.WOZMIXM stock boot.img",
+      "physical_baseline": "Offline development input only; not the installed Android 17 firmware"
+    }
+  }
+}

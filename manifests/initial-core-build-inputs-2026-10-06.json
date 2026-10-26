@@ -1,0 +1,208 @@
+{
+  "schema_version": 1,
+  "date_utc": "2026-10-05",
+  "scope": "standalone-aarch64-efi-diagnostic-only",
+  "mu_basecore_commit": "762a65dad79e2934cddbefa467b7e2c7b5ee4bc0",
+  "compiler_family": "Clang 20 clang-r547379",
+  "inputs": [
+    {
+      "path": "src/core/gpt.c",
+      "sha256": "4e5c87d39be5f3bd52738632eebfcc5a728f1c62e65c3b4f78153e9a7ad6ed38",
+      "kind": "project-source"
+    },
+    {
+      "path": "src/core/policy.c",
+      "sha256": "42154bbad1a121bd390169cbbce18b250c988981722a3723c2f75a5ad1e66c35",
+      "kind": "project-source"
+    },
+    {
+      "path": "src/core/buttons.c",
+      "sha256": "9202b54e2570eee4ebf096df63bdbb0f8e6d1e046b6c8102a122d5b355680950",
+      "kind": "project-source"
+    },
+    {
+      "path": "src/core/sha256.c",
+      "sha256": "6f2be12c3152e08a5205fefe9a8947349b6749b4b62fc75fed976d79ad3de3e5",
+      "kind": "project-source"
+    },
+    {
+      "path": "src/core/fat32.c",
+      "sha256": "531f1848b9652998ed1e377982e472dfe770e60e19c1eceaf56c511c94510429",
+      "kind": "project-source"
+    },
+    {
+      "path": "src/efi/EspProbe.c",
+      "sha256": "5efa060566bde7ad741be66827e5caff4ee36295656b24a212b389babf7244a8",
+      "kind": "project-source"
+    },
+    {
+      "path": "scripts/build-efi-probe.sh",
+      "sha256": "478be943c0309da307c14bb3406be4af1848bada79645aeb197dd88017cabdb6",
+      "kind": "build-script"
+    },
+    {
+      "path": "src/efi/UkeEspProbe.inf",
+      "sha256": "ac07a1cace693997529f5dd50a959760a1945d60a3e7e43d246020f90d582047",
+      "kind": "integration-metadata"
+    },
+    {
+      "path": "UkeBootCorePkg.dec",
+      "sha256": "20aab3b7ab34c834da5c33a67aa02025fb3e3624f3f3ac755e4e25c9b36cde86",
+      "kind": "integration-metadata"
+    },
+    {
+      "path": "include/uke/boot_core.h",
+      "sha256": "37de8332abdeb7cf858f1c03026a5107f6b6a7454825bc311f2852e4308e165f",
+      "kind": "project-header"
+    },
+    {
+      "path": "MdePkg/Include/AArch64/ProcessorBind.h",
+      "sha256": "7b91ed0dc2d2507e1dcf2c5b89e6b87f9d4646d163080ac6fff0dd843770efe5",
+      "kind": "upstream-header"
+    },
+    {
+      "path": "MdePkg/Include/Base.h",
+      "sha256": "7f3c8d94ad95fff617c8a9453b9dc965bae854a93dbd12dac24d7adc5f35443a",
+      "kind": "upstream-header"
+    },
+    {
+      "path": "MdePkg/Include/Guid/HiiFormMapMethodGuid.h",
+      "sha256": "193ddd68b259adc2c45d3ecaf5ac864ee504cc0332bb001a1345f7cf1c7fc55b",
+      "kind": "upstream-header"
+    },
+    {
+      "path": "MdePkg/Include/Guid/PcAnsi.h",
+      "sha256": "24e83bcdbe7ac4a93b2f992ec760c2d13f4e105346bd0a97ad862e36f28df886",
+      "kind": "upstream-header"
+    },
+    {
+      "path": "MdePkg/Include/Guid/WinCertificate.h",
+      "sha256": "0bbd18ac30f846cf707e3ae7015d980185caf2b166ca410d373c7cd4c3898ab3",
+      "kind": "upstream-header"
+    },
+    {
+      "path": "MdePkg/Include/IndustryStandard/Acpi10.h",
+      "sha256": "1b08ce3e7064909f1695c19a29fc0f7d2cfba7d6afe52c5eef08c5532557c10e",
+      "kind": "upstream-header"
+    },
+    {
+      "path": "MdePkg/Include/IndustryStandard/Acpi20.h",
+      "sha256": "58a61a4553128868a2aa93c0b969fe97ffbb235626a71066329a2f67bc8aa211",
+      "kind": "upstream-header"
+    },
+    {
+      "path": "MdePkg/Include/IndustryStandard/Acpi30.h",
+      "sha256": "ba96fcf7062601f20d579961bc5c45ba930326259b8ffca8db220ac8eee8922e",
+      "kind": "upstream-header"
+    },
+    {
+      "path": "MdePkg/Include/IndustryStandard/Acpi40.h",
+      "sha256": "9f3ac839557884bb1afb7d0c67e901f1b48d4a0a7ec075ffc4809245535e1d40",
+      "kind": "upstream-header"
+    },
+    {
+      "path": "MdePkg/Include/IndustryStandard/Acpi50.h",
+      "sha256": "352d6714aadbeb7efdbe04b3d39511283bf390408c20c96539c31985b7751f1e",
+      "kind": "upstream-header"
+    },
+    {
+      "path": "MdePkg/Include/IndustryStandard/Acpi51.h",
+      "sha256": "cb08137e60a79d13f991ee55a7cdd7a724820329a20f5a1eb987fd20a3df526c",
+      "kind": "upstream-header"
+    },
+    {
+      "path": "MdePkg/Include/IndustryStandard/Acpi60.h",
+      "sha256": "a42996ec54f89f1454722dea6bac5eedea6a14d59b612c410daaa111d3376d66",
+      "kind": "upstream-header"
+    },
+    {
+      "path": "MdePkg/Include/IndustryStandard/AcpiAml.h",
+      "sha256": "49c246183bf7b42f898bf183c88450e14984637d82788fc1820256b0e99bd72a",
+      "kind": "upstream-header"
+    },
+    {
+      "path": "MdePkg/Include/IndustryStandard/Bluetooth.h",
+      "sha256": "95e0690500d17f00408c47a5ee8eb649e0884231ed03bdc1baa1b654a93838f3",
+      "kind": "upstream-header"
+    },
+    {
+      "path": "MdePkg/Include/Protocol/BlockIo.h",
+      "sha256": "8b62cb2c34e259e8fa507bc0f0bbaf39801d55935e50441075a3166fe10fd426",
+      "kind": "upstream-header"
+    },
+    {
+      "path": "MdePkg/Include/Protocol/DevicePath.h",
+      "sha256": "4ef412fa29df1ca6bea267c5f2134bb4a11a3ea0dfa5aa627874486d80797a1a",
+      "kind": "upstream-header"
+    },
+    {
+      "path": "MdePkg/Include/Protocol/SimpleTextIn.h",
+      "sha256": "1e1d115414a4f81c82f660f161139961eae4965420c0ae27406c874ea4e14ce4",
+      "kind": "upstream-header"
+    },
+    {
+      "path": "MdePkg/Include/Protocol/SimpleTextInEx.h",
+      "sha256": "caed5497213eb0ba18fbf5c6bfe225c6e468f0e9d7fd2a3b13520b05b912dcc1",
+      "kind": "upstream-header"
+    },
+    {
+      "path": "MdePkg/Include/Protocol/SimpleTextOut.h",
+      "sha256": "8459fb6468178b5cd690f9e487ead2776ae76efbca923fca68e5f68503fb7b9f",
+      "kind": "upstream-header"
+    },
+    {
+      "path": "MdePkg/Include/Uefi.h",
+      "sha256": "b1750c005a1e090e3f882b53a33801900844255369d649f99f5eb966ac070e0e",
+      "kind": "upstream-header"
+    },
+    {
+      "path": "MdePkg/Include/Uefi/UefiBaseType.h",
+      "sha256": "2e4c254ea1d2dbeccc66fd0693506caa6d01913a3ad8b823b984ad4f906ab1ca",
+      "kind": "upstream-header"
+    },
+    {
+      "path": "MdePkg/Include/Uefi/UefiGpt.h",
+      "sha256": "bd35cfe034675f2d371ecbaaf9b71c9e561f4938a95c1f0656218a3b8401b8c2",
+      "kind": "upstream-header"
+    },
+    {
+      "path": "MdePkg/Include/Uefi/UefiInternalFormRepresentation.h",
+      "sha256": "8e313a387c9a12d89e24d2a340aeb4c93034e2a9aaa3058260d39a671461fc1b",
+      "kind": "upstream-header"
+    },
+    {
+      "path": "MdePkg/Include/Uefi/UefiMultiPhase.h",
+      "sha256": "0d192475bafdfcb3cef9ef54e9499fdf96d0a648a5a1ec738d9c24f05a2faa0e",
+      "kind": "upstream-header"
+    },
+    {
+      "path": "MdePkg/Include/Uefi/UefiPxe.h",
+      "sha256": "6e13c150e7f81c7672ea2f79083d75019b1508324722bdd438159d0b781bf952",
+      "kind": "upstream-header"
+    },
+    {
+      "path": "MdePkg/Include/Uefi/UefiSpec.h",
+      "sha256": "f5b560117fb4ee9bc6d2ad3b7fa239edc25346bf0c5b0f594312a0a21817340e",
+      "kind": "upstream-header"
+    },
+    {
+      "path": "clang-r547379/bin/clang",
+      "sha256": "55d80d777d85327543868817fb836231691eae2e13030ab31a01a769a820bf2f",
+      "kind": "host-build-tool"
+    },
+    {
+      "path": "clang-r547379/bin/lld-link",
+      "sha256": "55bfa2be5af6af9a3d9a17e310c501c0aca10f5431649988ed0a9a233c911652",
+      "kind": "host-build-tool"
+    },
+    {
+      "path": "build/efi-probe/UkeEspProbe.efi",
+      "sha256": "cf634faf9a863dd29c078e0c116b526438a1b907c70e784af504de109d3a827f",
+      "kind": "diagnostic-artifact"
+    }
+  ],
+  "reproducible_platform_build": false,
+  "bootable_uke_firmware": false,
+  "full_source_archive_complete": false,
+  "hardware_executed": false
+}

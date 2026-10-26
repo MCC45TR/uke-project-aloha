@@ -1,0 +1,23 @@
+# SPDX-License-Identifier: MIT
+[Defines]
+  INF_VERSION = 0x0001001B
+  BASE_NAME = UkeLinuxHandoffProbe
+  FILE_GUID = 72bc6435-d977-4749-ae5c-5df5a029d2de
+  MODULE_TYPE = UEFI_APPLICATION
+  VERSION_STRING = 0.1.0
+  ENTRY_POINT = UkeLinuxHandoffEntry
+[Sources]
+  LinuxHandoffProbe.c
+  ../linux/memory_map.c
+[Packages]
+  MdePkg/MdePkg.dec
+  UkeBootCorePkg.dec
+[LibraryClasses]
+  UefiApplicationEntryPoint
+[Protocols]
+  gEfiGraphicsOutputProtocolGuid
+[Guids]
+  gFdtTableGuid
+[BuildOptions]
+  GCC:*_*_*_CC_FLAGS = -DUKE_EDK2
+  MSFT:*_*_*_CC_FLAGS = /DUKE_EDK2

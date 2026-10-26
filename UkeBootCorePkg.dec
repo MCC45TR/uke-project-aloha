@@ -1,0 +1,9 @@
+# SPDX-License-Identifier: MIT
+[Defines]
+  DEC_SPECIFICATION = 0x0001001B
+  PACKAGE_NAME = UkeBootCorePkg
+  PACKAGE_GUID = b95db70c-1eb1-484d-a03f-ab773a9c9836
+  PACKAGE_VERSION = 0.1.0
+
+[Includes]
+  include

@@ -8,7 +8,7 @@ The port targets Fedora/Linux boot and return to Android.
 ## Status — 26 October 2026
 
 No bootable Uke UEFI image is available; neither model has booted this port.
-The [native source checkpoint](https://github.com/MCC45TR/uke-project-aloha/tree/publish/source-snapshot-20261026)
+The [native source checkpoint](docs/IMPLEMENTATION-STATUS.md)
 includes the C++ boot core, GPT/FAT32/ESP contracts and guarded EDK II adapters.
 All 12 host tests pass; the optional SEC framebuffer suite lacks its pinned
 libfdt input and was not run. Firmware handoff, storage writes and Android

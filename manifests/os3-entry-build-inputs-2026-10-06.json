@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "record_id": "ALOHA-ENTRY-20261006-01",
+  "generated_utc": "2026-10-06T03:59:33Z",
+  "profile_id": "uke-global-os3.0.303.0.wozmixm-development",
+  "input_inventory_scope": "selected project sources and runtime archives; not full dependency closure",
+  "sources_sha256": {
+    "CMakeLists.txt": "804a0336aa072df8b513cf1171f51e404e0aef153a90782e01d050d494f66bf6",
+    "include/uke/boot_core.h": "4b380cc06c34905b0eac2cf97a060eab603c650db3dde27cf000b625df443688",
+    "include/uke/boot_image.hpp": "dff441e313aeeebfb61dd4c5d8954f52b40fc0b674d79a5c8d0f9746ca251ece",
+    "src/boot/AndroidContinuation.S": "6e4ea8d91e4f0c67363f28f0837497f0fcace943856046eb398430a5f7ff012e",
+    "src/boot/boot_image.cpp": "d6c9f376a46f10b4d692a804d12d07ee30f2695b027ee91fd437e11480418124",
+    "src/host/boot_tool.cpp": "442e3b13e80a3cf5042942a0c6425073fbbb3bd1520e33b7334bdb47e1b554d1",
+    "src/core/gpt.c": "4e5c87d39be5f3bd52738632eebfcc5a728f1c62e65c3b4f78153e9a7ad6ed38",
+    "src/core/policy.c": "42154bbad1a121bd390169cbbce18b250c988981722a3723c2f75a5ad1e66c35",
+    "src/core/dispatch.c": "236b05eaf5172f53b81bacddc5cdd5e7255175f7d76d837af037c57050154663",
+    "src/core/sha256.c": "6f2be12c3152e08a5205fefe9a8947349b6749b4b62fc75fed976d79ad3de3e5",
+    "src/core/fat32.c": "531f1848b9652998ed1e377982e472dfe770e60e19c1eceaf56c511c94510429",
+    "src/platform/UkePlatformPkg/UkePlatformPkg.dec": "0d95905d27a0f3df4f8272b18f05a948bddc516d5b5a5e7557d5b4ce18f6efa7",
+    "src/platform/UkePlatformPkg/Include/Protocol/UkeBootPlatform.h": "ce1f1b5f2f50e80fe9944135691aac9a6a4a7bf1b1a16b4fa8af7fe65514390a",
+    "src/platform/UkePlatformPkg/BootDispatcher/BootDispatcher.c": "96e13607b90e11f3e77e9fb203800442d62b9fb1a5b55af48af455eceb8d2ae4",
+    "src/platform/UkePlatformPkg/BootDispatcher/BootDispatcher.inf": "e565b5df828bd8fcec46d002a7aa7c44f7cc0671d6d004dc1f4b009888569967",
+    "tests/boot_image_tests.cpp": "3cd3b0b0bf239dae975519a277d17bd9e53002a6e1939ee829cf6f996425abc2",
+    "tests/dispatch_tests.cpp": "cb3a457006d2074249d64c246de0e937b42632e40c5a8480886a00408b4278b3",
+    "tests/efi_dispatch_tests.c": "9d54577d39872898f11ac62841d11e46a497c6e36e5e555d1f1ffb3b9f4efa40",
+    "tests/android_continuation_smoke.S": "f6e6be84be4f5bd70ecdc092d429b2dce0dc199ac6d331268536962839425652",
+    "tests/boot-tool-files.sh": "d4d214f8cd701342b62e76473372562208960375508adf36feb9d9fd28d27a6a",
+    "tests/os3-boot-roundtrip.sh": "af1790823428c3ff4dbbcb5d99d5ef515c2cee025b97f49d2e70ae96e8dbe730",
+    "scripts/build-android-continuation.sh": "cb2385cf5ffedc1043a94283851942a1e915306dd8546c8d41027797f595437e",
+    "scripts/check-android-continuation.sh": "1412bf6ca5ae737808966d78f2a7f41dd0c0f5f0bed5e07f2d85dec8a6eb9a40",
+    "scripts/build-arm64-boot-tool.sh": "16f47da575bb5c6b145aa5084c5b52b38d880f34e3f318c99fe95312c1aea7b0",
+    "scripts/build-efi-dispatcher.sh": "38ca1de2284569d4119f61b69567a472a12347d1fa04f7496fcd4f3d8fc83fab",
+    "scripts/check-efi-dispatcher-host.sh": "325e1ef8b1ac323c9451f7fa381ad64ba0c11b0b4f639832a5c13898b0a461f5",
+    "scripts/record-entry-build-evidence.sh": "c1a2d1fa0fd27df022fca6c987e39550ded83fc127cc89b0f22ca00cef0da691"
+  },
+  "tool_inputs": {
+    "clang_repository": "2d4dcbff7cb42f360f368bacf51cfe711fd1cb0f",
+    "build_tools_repository": "8c01d80d728e5bf542e7d754064994d3f1107a7d",
+    "mu_basecore": "762a65dad79e2934cddbefa467b7e2c7b5ee4bc0",
+    "clang_sha256": "55d80d777d85327543868817fb836231691eae2e13030ab31a01a769a820bf2f",
+    "lld_sha256": "55bfa2be5af6af9a3d9a17e310c501c0aca10f5431649988ed0a9a233c911652",
+    "host_cxx_version": "c++ (GCC) 16.2.1 20260819 (Red Hat 16.2.1-2)",
+    "host_cxx_sha256": "d43227c181347687c224da7c1b8e9db756c6f24a43c810c2d40f0dfb266e6f6f",
+    "arm64_runtime_sha256": {
+      "libc++.a": "bd9057c31ea8b3d35d4fcdd9daff7609d9e68693fdf3dd765122bcc654518ad7",
+      "libc++abi.a": "8712896e96f221a02c61c15c21a79abb6faa6da9f0b1da0e2cb5614f10ae3755",
+      "libunwind.a": "f2d6904c6e7363af140b9d712d97c103ab48201ebb407cf2c839347e580a2c63",
+      "libc.a": "538f011cf169b08a5d8371beb1677624cac4ba40ee83a6dadd57e111a8add944",
+      "compiler-rt-builtins": "8cc2c4a7b35b2faa8c300d870adb11296a37f4f5ab62713281b096046d849d6e"
+    }
+  },
+  "artifacts": [
+    {
+      "path": "build/release/uke-boot-tool",
+      "sha256": "bec135f54fbc5bff1f16887b955f7cd9ea0d9d85110b912c951d4a3f94bfd6fe",
+      "bytes": 36816
+    },
+    {
+      "path": "build/arm64-boot-tool/uke-boot-tool",
+      "sha256": "46146f9bf66c739c37f92735c8f3a9cfbfc276b8a08a5f1a0235eeedd5e1ec74",
+      "bytes": 305792
+    },
+    {
+      "path": "build/android-continuation/AndroidContinuation.bin",
+      "sha256": "925bf97978be337cf0aaa05db8fb317973d15380da6dffb3ffe61fbe4d24e8b0",
+      "bytes": 256
+    },
+    {
+      "path": "build/efi-dispatcher/UkeBootDispatcher.efi",
+      "sha256": "2d753b542812f4ca52e60cf1bb73ef4ea6ef518d3a48d1a81559e0d2c1ad005a",
+      "bytes": 16896
+    }
+  ],
+  "checks": {
+    "release_ctest": "10/10",
+    "sanitizer_ctest": "10/10",
+    "boot_codec_native": "73/73",
+    "boot_codec_qemu_user": "73/73",
+    "os3_native_scenarios": "8/8",
+    "os3_qemu_user_scenarios": "8/8",
+    "entry_qemu_user_fixtures": "2/2",
+    "portable_dispatch_lifecycle": "7/7",
+    "efi_host_lifecycle": "7/7",
+    "efi_host_io": "6/6"
+  },
+  "receipt_logs_sha256": {
+    "build/entry-receipts/arm64-build.log": "dd76c57262cd27ad905295026641bb6effebebde033a4dabec9637c7d2861d8b",
+    "build/entry-receipts/boot-codec-arm64.log": "06ff6f2a7f63a62d285a6ae6d0f3350cde112e5d24263055148d58086639f78f",
+    "build/entry-receipts/boot-codec-native.log": "06ff6f2a7f63a62d285a6ae6d0f3350cde112e5d24263055148d58086639f78f",
+    "build/entry-receipts/dispatch-native.log": "776dd2c96a66e9ea89314c6bf20d006be668138c07ec75c40bd8eb15f448e353",
+    "build/entry-receipts/dispatcher-build.log": "5748423ac94dd5d637f5c1452e29cedcd201cc801bc1f1884f9cf4272b4d1291",
+    "build/entry-receipts/dispatcher-host.log": "e43da752a25ed438c979e7a8999aa33b48e03d554150ad309ca5f55d500055f6",
+    "build/entry-receipts/entry-arm64.log": "aafe0fd7c31406de83add49bd55ca8de21c3146c0244b9b66b560de2b2659867",
+    "build/entry-receipts/os3-arm64.log": "f3311dd1d87fe060a64bba76bc2a05ea8e44e66938ecd2f53069b746aa655355",
+    "build/entry-receipts/os3-native.log": "f3311dd1d87fe060a64bba76bc2a05ea8e44e66938ecd2f53069b746aa655355",
+    "build/entry-receipts/release-build.log": "8c35b1682f73592d30612d7b0fabdb384fcfff35cb5a076cb48b85b1368aa794",
+    "build/entry-receipts/release-tests.log": "8240021fcf378daf418f66d4a8f376517786032735a665a60075896673b1de41",
+    "build/entry-receipts/sanitizer-build.log": "8c35b1682f73592d30612d7b0fabdb384fcfff35cb5a076cb48b85b1368aa794",
+    "build/entry-receipts/sanitizer-tests.log": "7b15cca92fdda2b549edb62a2b80c4da4b76ff3fd22ccb9de4d196dd57452480"
+  },
+  "physical_device_operation": false,
+  "actual_efi_services_executed": false,
+  "raw_uke_firmware_built": false,
+  "installable_zip_built": false,
+  "archive_complete": false,
+  "stock_image_redistributed": false,
+  "python_runtime_payload": false
+}

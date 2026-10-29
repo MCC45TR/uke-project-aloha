@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "record_id": "ALOHA-PLATFORM-20261006-01",
+  "generated_utc": "2026-10-06T04:18:52Z",
+  "profile_id": "uke-global-os3.0.303.0.wozmixm-development",
+  "inventory_scope": "selected platform project sources, tools and headers; not complete dependency closure",
+  "source_sha256": {
+    "CMakeLists.txt": "133482f507cbc14017fc697aaf4fecbdeee72f242eff5ce0d927663c02a8604e",
+    "include/uke/boot_core.h": "4b380cc06c34905b0eac2cf97a060eab603c650db3dde27cf000b625df443688",
+    "include/uke/platform_boot.h": "ecf4e9958e5901f9b203a5bff06ff2c9a92fc56e5bb4d4534d1f4e32bda05395",
+    "include/uke/raw_entry.h": "5e1c16ca943489a87cc9ee703b08c9c4f0fd2f1c902078a6636a91e1fce28dab",
+    "src/core/sha256.c": "6f2be12c3152e08a5205fefe9a8947349b6749b4b62fc75fed976d79ad3de3e5",
+    "scripts/check-sec-entry.sh": "bb9b249fb56b8ddc0891a887ae0330e57fdf24bd0302b73c5eb3bbf42516e67c",
+    "scripts/check-efi-return.sh": "d9463ebbb02e32a7c078f707dedacdcb23bad00a192f2cf18ec39d557e29ce02",
+    "scripts/check-ufs-read-only.sh": "696b78cd8fd7f3a7c86cc88880b971728a78062423022f7214820e30b2ca76e7",
+    "scripts/record-platform-build-evidence.sh": "08303d01711af6e7e5725153a721fcd64ef40ed08420da1497f84fee264fc739",
+    "tests/platform_boot_tests.cpp": "1cc080a9eaf7a824cbefdd87becf11a597ad2d6620f226a49d7009ce0adaaca8",
+    "tests/ufs_read_only_tests.c": "bfd19447ba62b280cc1397f2595bd9f9f793b369df8857c1fa80b2658e8036e7",
+    "tests/efi_return_tests.c": "49300d0ef382d594c7a32ac176bc96e7fed3e17c00aba43ad9de8e791773e639",
+    "tests/raw_resume_smoke.S": "ba479444aa6755fc42dff6fbf02ea411810553a48351b33b22a663c754c95a0f",
+    "src/platform/UkePlatformPkg/AndroidReturn/ExitServices.c": "154cee9e6b0053d7ceaf09fbd7fced5d87f24ba8fe0fa15211fdfa875ef54d91",
+    "src/platform/UkePlatformPkg/AndroidReturn/ResumeRaw.S": "9a9e56db821b20afcc3b70f349d92d08f7be3ca0a6d4d4521cc4b21747f4f1fc",
+    "src/platform/UkePlatformPkg/AndroidReturn/ReturnTransaction.c": "be672c877776bbfb257bd19fe9734d683cddc82829197c4e1d0349f4237eff89",
+    "src/platform/UkePlatformPkg/AndroidReturn/UkeAndroidReturnLib.inf": "f78881b3af9eadd844f1251dc118fd98bd424bda4b2e65afebe08a180766129a",
+    "src/platform/UkePlatformPkg/BootDispatcher/BootDispatcher.c": "96e13607b90e11f3e77e9fb203800442d62b9fb1a5b55af48af455eceb8d2ae4",
+    "src/platform/UkePlatformPkg/BootDispatcher/BootDispatcher.inf": "e565b5df828bd8fcec46d002a7aa7c44f7cc0671d6d004dc1f4b009888569967",
+    "src/platform/UkePlatformPkg/Include/Protocol/UkeBootPlatform.h": "ce1f1b5f2f50e80fe9944135691aac9a6a4a7bf1b1a16b4fa8af7fe65514390a",
+    "src/platform/UkePlatformPkg/Include/UkeAndroidReturn.h": "c20d7e333b17ef41f9bc9fb5903c1cee64a81f5848182771632d63b53abb709d",
+    "src/platform/UkePlatformPkg/Include/UkeSecEntry.h": "e9f47243e1862c482b736589112f665b667ef4d302ce3e273e0e065cb799095f",
+    "src/platform/UkePlatformPkg/Include/UkeUfsReadOnly.h": "58a780cab86591b872c23c876deee6c77d75312194469a1987e661e0cb560a28",
+    "src/platform/UkePlatformPkg/PrePi/MemoryPlan.c": "f204db4c10cc280a2b25c4b78ee738c340ea63e934a2d78e608dda5b6aba0bfa",
+    "src/platform/UkePlatformPkg/README.md": "54f3ec85ab67c5cdedd875a6001ddfd940c5035f117d0261468b1240c8ec6646",
+    "src/platform/UkePlatformPkg/Sec/CaptureEntry.S": "e3803fd5fc65e45141d7947ba9ba0a98b7eb3968ac3063e94978d9d382ee9644",
+    "src/platform/UkePlatformPkg/Sec/EntryAdmission.c": "3951c472cc22c72883f2885e2c26a4423eb9dc9c5d182b99333bbc38ad75a5ff",
+    "src/platform/UkePlatformPkg/Sec/UkeSecEntryLib.inf": "ca53b89945e15dee45d0498739ef16c99e4df0303e5fc4bc15fb2ef71bedc931",
+    "src/platform/UkePlatformPkg/UfsReadOnly/UfsReadOnly.c": "04868cf17c048e7730ccbdb817ec76effe4e09b6557fe37dba655e3ce52ca7e0",
+    "src/platform/UkePlatformPkg/UfsReadOnly/UfsReadOnly.inf": "f1d6f1bd02a7d199bab2b74da97376671a5068487ec2e90b2568d94a0a34fc59",
+    "src/platform/UkePlatformPkg/UkePlatformPkg.dec": "3e160528efdba8c09fcfc2751b7eeb80075d19a151227e499b5190b682a16a48"
+  },
+  "header_sha256": {
+    "Include/Uefi.h": "b1750c005a1e090e3f882b53a33801900844255369d649f99f5eb966ac070e0e",
+    "Include/Base.h": "7f3c8d94ad95fff617c8a9453b9dc965bae854a93dbd12dac24d7adc5f35443a",
+    "Include/AArch64/ProcessorBind.h": "7b91ed0dc2d2507e1dcf2c5b89e6b87f9d4646d163080ac6fff0dd843770efe5",
+    "Include/Protocol/DevicePath.h": "4ef412fa29df1ca6bea267c5f2134bb4a11a3ea0dfa5aa627874486d80797a1a",
+    "Include/Protocol/ScsiIo.h": "e1bdc6bc11b0fa94c3c35d40526692bb8db1b6168939042b85e732fc133b6b93",
+    "Include/Uefi/UefiSpec.h": "f5b560117fb4ee9bc6d2ad3b7fa239edc25346bf0c5b0f594312a0a21817340e"
+  },
+  "tool_inputs": {
+    "clang_repository": "2d4dcbff7cb42f360f368bacf51cfe711fd1cb0f",
+    "mu_basecore": "762a65dad79e2934cddbefa467b7e2c7b5ee4bc0",
+    "clang_sha256": "55d80d777d85327543868817fb836231691eae2e13030ab31a01a769a820bf2f",
+    "llvm_ar_sha256": "966d8ed2cab3fd3057398af43b3a07b91f1fd3482dc3713458808e6dd86396d6"
+  },
+  "artifacts": [
+    {
+      "path": "build/sec-entry/UkeSecEntry.lib",
+      "sha256": "5fab23360d90e3223826f0d43ad88bf9e71870e37b68e80703c87ba158eeb620",
+      "bytes": 5160
+    },
+    {
+      "path": "build/ufs-read-only/UkeUfsReadOnly.lib",
+      "sha256": "2bd6160c9643b65e480d4d3349e585bbc847323a81d08e5667bd889a7b0bdde4",
+      "bytes": 5262
+    },
+    {
+      "path": "build/efi-return/UkeAndroidReturn.lib",
+      "sha256": "0ac5641ef7cea9a3e31d15a21e803c97e85414e186f202a00a200501280a80aa",
+      "bytes": 4452
+    }
+  ],
+  "receipt_logs_sha256": {
+    "build/platform-receipts/efi-return.log": "a855b973d6f818b00819bd671c95b6a42c4441d4a5d8ed17a21dff9354681ec4",
+    "build/platform-receipts/platform.log": "a93dcce064d59d41d001cad5d6739c3d1295274bc34eb1d24c05173c744c9761",
+    "build/platform-receipts/release-build.log": "8c35b1682f73592d30612d7b0fabdb384fcfff35cb5a076cb48b85b1368aa794",
+    "build/platform-receipts/release-tests.log": "d7dcc815ad17c359b288e91739b4be71e35f5881df237572c733bf14562d2b5c",
+    "build/platform-receipts/sanitizer-build.log": "8c35b1682f73592d30612d7b0fabdb384fcfff35cb5a076cb48b85b1368aa794",
+    "build/platform-receipts/sanitizer-tests.log": "18c8bb7fdd3842c1b84b9beb4b85837230fe85d783a4623991d8cc667acdb8f8",
+    "build/platform-receipts/sec-entry.log": "55338c9bf06f5bde18da52cc5d757a6e2875917ff10d5f6ececc7cadb583026f",
+    "build/platform-receipts/ufs.log": "434754673de628f64b34bf3add48662fd583fbc04d5e6963f1f6f2085a952073"
+  },
+  "checks": {
+    "release_ctest": "11/11",
+    "sanitizer_ctest": "11/11",
+    "platform_memory_return": "104/104",
+    "ufs_efi_mocks": "82/82",
+    "efi_exit_mocks": "136/136",
+    "raw_resume_qemu_user": "2/2"
+  },
+  "raw_uke_firmware_built": false,
+  "full_edk2_inf_dsc_fdf_build": false,
+  "installable_zip_built": false,
+  "actual_efi_services_executed": false,
+  "privileged_sec_capture_executed": false,
+  "controller_phy_executed": false,
+  "physical_device_operation": false,
+  "copr_uploaded": false,
+  "archive_complete": false,
+  "python_runtime_payload": false
+}

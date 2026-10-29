@@ -1,0 +1,21 @@
+# SPDX-License-Identifier: MIT
+[Defines]
+  INF_VERSION = 0x0001001B
+  BASE_NAME = UkeSecEntryLib
+  FILE_GUID = ffe46c23-0b2d-48ce-8c61-17cc601fb64b
+  MODULE_TYPE = BASE
+  VERSION_STRING = 0.1.0
+  LIBRARY_CLASS = UkeSecEntryLib
+[Sources]
+  EntryAdmission.c
+  ../PrePi/MemoryPlan.c
+[Sources.AARCH64]
+  CaptureEntry.S
+  ../AndroidReturn/ResumeRaw.S
+[Packages]
+  MdePkg/MdePkg.dec
+  UkeBootCorePkg.dec
+  src/platform/UkePlatformPkg/UkePlatformPkg.dec
+[BuildOptions]
+  GCC:*_*_*_CC_FLAGS = -DUKE_EDK2
+  MSFT:*_*_*_CC_FLAGS = /DUKE_EDK2

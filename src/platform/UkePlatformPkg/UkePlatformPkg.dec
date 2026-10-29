@@ -1,0 +1,17 @@
+# SPDX-License-Identifier: MIT
+[Defines]
+  DEC_SPECIFICATION = 0x0001001B
+  PACKAGE_NAME = UkePlatformPkg
+  PACKAGE_GUID = 788e0da9-16b9-490c-a3b6-4b231fc72e6e
+  PACKAGE_VERSION = 0.1.0
+
+[Includes]
+  Include
+
+[LibraryClasses]
+  UkeUfsReadOnlyLib|Include/UkeUfsReadOnly.h
+  UkeAndroidReturnLib|Include/UkeAndroidReturn.h
+  UkeSecEntryLib|Include/UkeSecEntry.h
+
+[Protocols]
+  gUkeBootPlatformProtocolGuid = {0x89b770ba, 0x435e, 0x4308, {0xb5, 0x59, 0xaf, 0x4f, 0xb8, 0xe3, 0x51, 0x32}}

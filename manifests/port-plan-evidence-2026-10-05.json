@@ -1,0 +1,174 @@
+{
+  "schema_version": 1,
+  "reviewed_date": "2026-10-05",
+  "evidence_class": "source-and-planning",
+  "scope": "Uke AArch64 UEFI, Fedora/Linux and Android return; Windows is the last future expansion",
+  "source_catalog_changed": false,
+  "donor_executed": false,
+  "firmware_built": false,
+  "device_operation_performed": false,
+  "hardware_acceptance_changed": false,
+  "aloha": {
+    "repository": "https://github.com/Project-Aloha/mu_aloha_platforms",
+    "locked_reference": "8d37e2bfab2f9d959ac0b3d68434e8be4866bf55",
+    "reviewed_live_main": "7c81a0c77fbf77bc28a305e1e9d075f53648f93b",
+    "commit_time_utc": "2026-10-05T12:04:01Z",
+    "recursive_tree_truncated": false,
+    "target_path_matches": [],
+    "direct_gitlinks": [
+      {
+        "path": "Binaries",
+        "commit": "ce59dcf54753e112d7b847dd997d3ae934094e0d"
+      },
+      {
+        "path": "Common/MU",
+        "commit": "49625b8f6cabe7e4d9797d192c354b14af0490d1"
+      },
+      {
+        "path": "Common/MU_OEM_SAMPLE",
+        "commit": "15c43745132537ef047d0fac6403ed78e520f3f8"
+      },
+      {
+        "path": "Features/CONFIG",
+        "commit": "6789841f35d417fafbe6a9ff9427360b52ca37d9"
+      },
+      {
+        "path": "Features/DFCI",
+        "commit": "cd33bec609f4d55dc753eb7b485ea251a5fb6be6"
+      },
+      {
+        "path": "MU_BASECORE",
+        "commit": "562c0927ef7bfc65d26d9caf322e569ccb23b6a9"
+      },
+      {
+        "path": "Platforms/CranePkg",
+        "commit": "2d9ab7412377aa6401174edc2cd6227a171aa6b7"
+      },
+      {
+        "path": "Platforms/MbedTlsPkg/Library/MbedTlsLib/mbedtls",
+        "commit": "e185d7fd85499c8ce5ca2a54f5cf8fe7dbe3f8df"
+      },
+      {
+        "path": "Platforms/OpensslPkg/Library/OpensslLib/openssl",
+        "commit": "aea7aaf2abb04789f5868cbabec406ea43aa84bf"
+      },
+      {
+        "path": "Platforms/SurfaceDuoACPI",
+        "commit": "d742758fe575c08b5278d84fec1b3b313551a587"
+      }
+    ],
+    "changed_direct_gitlinks": [
+      {
+        "path": "Common/MU",
+        "locked_commit": "c6dc1247320711ac0967a7a10dddf9ddf55806b2",
+        "reviewed_commit": "49625b8f6cabe7e4d9797d192c354b14af0490d1"
+      },
+      {
+        "path": "Common/MU_OEM_SAMPLE",
+        "locked_commit": "2135f522f14bc6797d17355c8ce2a4539260743f",
+        "reviewed_commit": "15c43745132537ef047d0fac6403ed78e520f3f8"
+      },
+      {
+        "path": "Features/CONFIG",
+        "locked_commit": "d08c5af327768d2820bbd030ca5af443be33bce8",
+        "reviewed_commit": "6789841f35d417fafbe6a9ff9427360b52ca37d9"
+      },
+      {
+        "path": "Features/DFCI",
+        "locked_commit": "401e480fe46d348115a6fe94a878d50069b8098c",
+        "reviewed_commit": "cd33bec609f4d55dc753eb7b485ea251a5fb6be6"
+      },
+      {
+        "path": "MU_BASECORE",
+        "locked_commit": "762a65dad79e2934cddbefa467b7e2c7b5ee4bc0",
+        "reviewed_commit": "562c0927ef7bfc65d26d9caf322e569ccb23b6a9"
+      },
+      {
+        "path": "Platforms/CranePkg",
+        "locked_commit": "80e799e630ff50dba5096b431e0d9d56aca67f74",
+        "reviewed_commit": "2d9ab7412377aa6401174edc2cd6227a171aa6b7"
+      }
+    ],
+    "existing_archive_ledger": {
+      "archive_complete": false,
+      "submodule_status": "pending-separate-archives",
+      "license_review": "pending-file-level-review"
+    },
+    "reviewed_crdk": {
+      "commit": "2d9ab7412377aa6401174edc2cd6227a171aa6b7",
+      "recursive_tree_truncated": false
+    },
+    "limitation": "Complete parent and CrDK path inventories do not establish absence across every fork, file body or nested dependency; exact dependency closure is still required."
+  },
+  "boot_managers": {
+    "systemd_source_commit": "b11ba559a6311a2a8ace17aaafe3237d5ff8b158",
+    "systemd_source_files": [
+      "src/boot/boot.c",
+      "src/boot/console.c",
+      "src/boot/console.h",
+      "man/systemd-boot.xml",
+      "man/loader.conf.xml"
+    ],
+    "systemd_findings": [
+      "Menu handles SCAN_VOLUME_UP, SCAN_VOLUME_DOWN and SCAN_SUSPEND",
+      "Console consumes Simple Text Input and Simple Text Input Ex",
+      "Reviewed menu is key-driven; pointer enumeration is not native menu support"
+    ],
+    "refind_document": "https://www.rodsbooks.com/refind/configfile.html",
+    "refind_findings": [
+      "Mouse and touch modes documented as mutually exclusive",
+      "Documented submenu selection limitations"
+    ],
+    "shipping_versions_selected": false,
+    "executed": false
+  },
+  "required_boot_policy": {
+    "discover_internal_esp_read_only": true,
+    "no_eligible_esp_action": "ordinary-stock-android",
+    "missing_or_invalid_manager_action": "ordinary-stock-android",
+    "ambiguous_esp_action": "ordinary-stock-android",
+    "android_fallback_requires_esp": false,
+    "installation_owner": "recovery",
+    "planned_userdata_allocations": [
+      "Android userdata",
+      "shared ESP",
+      "Linux",
+      "future Windows capacity"
+    ],
+    "geometry_verified": false
+  },
+  "stock_record": {
+    "record_id": "STOCK-ADB-20261003-01",
+    "firmware": "OS2.0.205.0.VOZMIXM",
+    "observation_date": "2026-10-03",
+    "last_recorded_lock_state": "locked",
+    "refreshed_live_in_this_review": false
+  },
+  "local_snapshots": [
+    {
+      "file": "aloha-tree.json",
+      "sha256": "cedc38f0dbf03ea3cb107ac2af08cf80cbc4bbe50dae223c91068711228facad"
+    },
+    {
+      "file": "crdk-tree.json",
+      "sha256": "487d9983b6f2a945639d8d9ea234b91c4642fbc644ad2fbb0c585955a9e61426"
+    },
+    {
+      "file": "README.md",
+      "sha256": "6934185126e90067b6f4d9af44c49d5bf914ca913d628abf6fd38a2b1629a9ce"
+    },
+    {
+      "file": ".gitmodules",
+      "sha256": "70df4a7cc083de1bdb9418ea419c0b9f6b57be2b321656617b1911befbaf079a"
+    },
+    {
+      "file": "pip-requirements.txt",
+      "sha256": "1ad6fafbd2d9be997280ee6af86cad150c84d36aa8d6f6c3a8d22bf8d20daca1"
+    }
+  ],
+  "snapshot_directory": "referances/research/2026-10-05-aloha-plan",
+  "access_limits": [
+    "Selected web-reader pages failed; GitHub API/raw sources and direct rEFInd documentation fetch succeeded",
+    "UEFI specification HTML reader requests failed; no new UEFI specification revision claim is made"
+  ]
+}

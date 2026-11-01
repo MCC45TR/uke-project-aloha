@@ -1,0 +1,275 @@
+{
+  "schema_version": 1,
+  "scope": "read-only-exact-checkout-identity",
+  "nodes": [
+    {
+      "path": "referances/donors/aloha-platforms",
+      "expected_commit": "8d37e2bfab2f9d959ac0b3d68434e8be4866bf55",
+      "observed_commit": "8d37e2bfab2f9d959ac0b3d68434e8be4866bf55",
+      "status": "exact-checkout"
+    },
+    {
+      "path": "referances/donors/aloha-platforms/Binaries",
+      "expected_commit": "ce59dcf54753e112d7b847dd997d3ae934094e0d",
+      "observed_commit": "ce59dcf54753e112d7b847dd997d3ae934094e0d",
+      "status": "exact-checkout"
+    },
+    {
+      "path": "referances/donors/aloha-platforms/Common/MU",
+      "expected_commit": "c6dc1247320711ac0967a7a10dddf9ddf55806b2",
+      "observed_commit": "c6dc1247320711ac0967a7a10dddf9ddf55806b2",
+      "status": "exact-checkout"
+    },
+    {
+      "path": "referances/donors/aloha-platforms/Common/MU_OEM_SAMPLE",
+      "expected_commit": "2135f522f14bc6797d17355c8ce2a4539260743f",
+      "observed_commit": "2135f522f14bc6797d17355c8ce2a4539260743f",
+      "status": "exact-checkout"
+    },
+    {
+      "path": "referances/donors/aloha-platforms/Features/CONFIG",
+      "expected_commit": "d08c5af327768d2820bbd030ca5af443be33bce8",
+      "observed_commit": "d08c5af327768d2820bbd030ca5af443be33bce8",
+      "status": "exact-checkout"
+    },
+    {
+      "path": "referances/donors/aloha-platforms/Features/DFCI",
+      "expected_commit": "401e480fe46d348115a6fe94a878d50069b8098c",
+      "observed_commit": "401e480fe46d348115a6fe94a878d50069b8098c",
+      "status": "exact-checkout"
+    },
+    {
+      "path": "referances/donors/aloha-platforms/MU_BASECORE",
+      "expected_commit": "762a65dad79e2934cddbefa467b7e2c7b5ee4bc0",
+      "observed_commit": "762a65dad79e2934cddbefa467b7e2c7b5ee4bc0",
+      "status": "exact-checkout"
+    },
+    {
+      "path": "referances/donors/aloha-platforms/MU_BASECORE/BaseTools/Source/C/BrotliCompress/brotli",
+      "expected_commit": "e230f474b87134e8c6c85b630084c612057f253e",
+      "observed_commit": "e230f474b87134e8c6c85b630084c612057f253e",
+      "status": "exact-checkout"
+    },
+    {
+      "path": "referances/donors/aloha-platforms/MU_BASECORE/MdeModulePkg/Library/BrotliCustomDecompressLib/brotli",
+      "expected_commit": "e230f474b87134e8c6c85b630084c612057f253e",
+      "observed_commit": "e230f474b87134e8c6c85b630084c612057f253e",
+      "status": "exact-checkout"
+    },
+    {
+      "path": "referances/donors/aloha-platforms/MU_BASECORE/MdeModulePkg/Universal/RegularExpressionDxe/oniguruma",
+      "expected_commit": "4ef89209a239c1aea328cf13c05a2807e5c146d1",
+      "observed_commit": "4ef89209a239c1aea328cf13c05a2807e5c146d1",
+      "status": "exact-checkout"
+    },
+    {
+      "path": "referances/donors/aloha-platforms/MU_BASECORE/MdePkg/Library/BaseFdtLib/libfdt",
+      "expected_commit": "cfff805481bdea27f900c32698171286542b8d3c",
+      "observed_commit": "cfff805481bdea27f900c32698171286542b8d3c",
+      "status": "exact-checkout"
+    },
+    {
+      "path": "referances/donors/aloha-platforms/MU_BASECORE/MdePkg/Library/MipiSysTLib/mipisyst",
+      "expected_commit": "370b5944c046bab043dd8b133727b2135af7747a",
+      "observed_commit": "370b5944c046bab043dd8b133727b2135af7747a",
+      "status": "exact-checkout"
+    },
+    {
+      "path": "referances/donors/aloha-platforms/MU_BASECORE/MdePkg/Library/MipiSysTLib/mipisyst/external/googletest",
+      "expected_commit": "a6f06bf2fd3b832822cd4e9e554b7d47f32ec084",
+      "observed_commit": "a6f06bf2fd3b832822cd4e9e554b7d47f32ec084",
+      "status": "exact-checkout"
+    },
+    {
+      "path": "referances/donors/aloha-platforms/MU_BASECORE/MdePkg/Library/MipiSysTLib/mipisyst/external/pugixml",
+      "expected_commit": "c53fdab93af76106b963216d85897614b996f8b6",
+      "observed_commit": "c53fdab93af76106b963216d85897614b996f8b6",
+      "status": "exact-checkout"
+    },
+    {
+      "path": "referances/donors/aloha-platforms/MU_BASECORE/SecurityPkg/DeviceSecurity/SpdmLib/libspdm",
+      "expected_commit": "98ef964e1e9a0c39c7efb67143d3a13a819432e0",
+      "observed_commit": "98ef964e1e9a0c39c7efb67143d3a13a819432e0",
+      "status": "exact-checkout"
+    },
+    {
+      "path": "referances/donors/aloha-platforms/MU_BASECORE/SecurityPkg/DeviceSecurity/SpdmLib/libspdm/os_stub/mbedtlslib/mbedtls",
+      "expected_commit": "107ea89daaefb9867ea9121002fbbdf926780e98",
+      "observed_commit": "107ea89daaefb9867ea9121002fbbdf926780e98",
+      "status": "exact-checkout"
+    },
+    {
+      "path": "referances/donors/aloha-platforms/MU_BASECORE/SecurityPkg/DeviceSecurity/SpdmLib/libspdm/os_stub/mbedtlslib/mbedtls/framework",
+      "expected_commit": "94599c0e3b5036e086446a51a3f79640f70f22f6",
+      "observed_commit": "94599c0e3b5036e086446a51a3f79640f70f22f6",
+      "status": "exact-checkout"
+    },
+    {
+      "path": "referances/donors/aloha-platforms/MU_BASECORE/SecurityPkg/DeviceSecurity/SpdmLib/libspdm/os_stub/openssllib/openssl",
+      "expected_commit": "de90e54bbe82e5be4fb9608b6f5c308bb837d355",
+      "observed_commit": "de90e54bbe82e5be4fb9608b6f5c308bb837d355",
+      "status": "exact-checkout"
+    },
+    {
+      "path": "referances/donors/aloha-platforms/MU_BASECORE/SecurityPkg/DeviceSecurity/SpdmLib/libspdm/os_stub/openssllib/openssl/gost-engine",
+      "expected_commit": "b2b4d629f100eaee9f5942a106b1ccefe85b8808",
+      "observed_commit": "b2b4d629f100eaee9f5942a106b1ccefe85b8808",
+      "status": "exact-checkout"
+    },
+    {
+      "path": "referances/donors/aloha-platforms/MU_BASECORE/SecurityPkg/DeviceSecurity/SpdmLib/libspdm/os_stub/openssllib/openssl/gost-engine/libprov",
+      "expected_commit": "8a126e09547630ef900177625626b6156052f0ee",
+      "observed_commit": "8a126e09547630ef900177625626b6156052f0ee",
+      "status": "exact-checkout"
+    },
+    {
+      "path": "referances/donors/aloha-platforms/MU_BASECORE/SecurityPkg/DeviceSecurity/SpdmLib/libspdm/os_stub/openssllib/openssl/krb5",
+      "expected_commit": "aa9b4a2a64046afd2fab7cb49c346295874a5fb6",
+      "observed_commit": "aa9b4a2a64046afd2fab7cb49c346295874a5fb6",
+      "status": "exact-checkout"
+    },
+    {
+      "path": "referances/donors/aloha-platforms/MU_BASECORE/SecurityPkg/DeviceSecurity/SpdmLib/libspdm/os_stub/openssllib/openssl/pyca-cryptography",
+      "expected_commit": "c18d0567386414efa3caef7ed586c4ca75bf3a8b",
+      "observed_commit": "c18d0567386414efa3caef7ed586c4ca75bf3a8b",
+      "status": "exact-checkout"
+    },
+    {
+      "path": "referances/donors/aloha-platforms/MU_BASECORE/SecurityPkg/DeviceSecurity/SpdmLib/libspdm/os_stub/openssllib/openssl/wycheproof",
+      "expected_commit": "2196000605e45d91097147c9c71f26b72af58003",
+      "observed_commit": "2196000605e45d91097147c9c71f26b72af58003",
+      "status": "exact-checkout"
+    },
+    {
+      "path": "referances/donors/aloha-platforms/MU_BASECORE/SecurityPkg/DeviceSecurity/SpdmLib/libspdm/unit_test/cmockalib/cmocka",
+      "expected_commit": "a01cc69ee9536f90e57c61a198f2d1944d3d4313",
+      "observed_commit": "a01cc69ee9536f90e57c61a198f2d1944d3d4313",
+      "status": "exact-checkout"
+    },
+    {
+      "path": "referances/donors/aloha-platforms/MU_BASECORE/UnitTestFrameworkPkg/Library/CmockaLib/cmocka",
+      "expected_commit": "1cc9cde3448cdd2e000886a26acf1caac2db7cf1",
+      "observed_commit": "1cc9cde3448cdd2e000886a26acf1caac2db7cf1",
+      "status": "exact-checkout"
+    },
+    {
+      "path": "referances/donors/aloha-platforms/MU_BASECORE/UnitTestFrameworkPkg/Library/GoogleTestLib/googletest",
+      "expected_commit": "86add13493e5c881d7e4ba77fb91c1f57752b3a4",
+      "observed_commit": "86add13493e5c881d7e4ba77fb91c1f57752b3a4",
+      "status": "exact-checkout"
+    },
+    {
+      "path": "referances/donors/aloha-platforms/MU_BASECORE/UnitTestFrameworkPkg/Library/SubhookLib/subhook",
+      "expected_commit": "83d4e1ebef3588fae48b69a7352cc21801cb70bc",
+      "observed_commit": "83d4e1ebef3588fae48b69a7352cc21801cb70bc",
+      "status": "exact-checkout"
+    },
+    {
+      "path": "referances/donors/aloha-platforms/Platforms/CranePkg",
+      "expected_commit": "80e799e630ff50dba5096b431e0d9d56aca67f74",
+      "observed_commit": "80e799e630ff50dba5096b431e0d9d56aca67f74",
+      "status": "exact-checkout"
+    },
+    {
+      "path": "referances/donors/aloha-platforms/Platforms/MbedTlsPkg/Library/MbedTlsLib/mbedtls",
+      "expected_commit": "e185d7fd85499c8ce5ca2a54f5cf8fe7dbe3f8df",
+      "observed_commit": "e185d7fd85499c8ce5ca2a54f5cf8fe7dbe3f8df",
+      "status": "exact-checkout"
+    },
+    {
+      "path": "referances/donors/aloha-platforms/Platforms/MbedTlsPkg/Library/MbedTlsLib/mbedtls/framework",
+      "expected_commit": "457996474728cb8e968ed21953b72f74d2f536b2",
+      "observed_commit": "457996474728cb8e968ed21953b72f74d2f536b2",
+      "status": "exact-checkout"
+    },
+    {
+      "path": "referances/donors/aloha-platforms/Platforms/OpensslPkg/Library/OpensslLib/openssl",
+      "expected_commit": "aea7aaf2abb04789f5868cbabec406ea43aa84bf",
+      "observed_commit": "aea7aaf2abb04789f5868cbabec406ea43aa84bf",
+      "status": "exact-checkout"
+    },
+    {
+      "path": "referances/donors/aloha-platforms/Platforms/OpensslPkg/Library/OpensslLib/openssl/cloudflare-quiche",
+      "expected_commit": "7ab6a55cfe471267d61e4d28ba43d41defcd87e0",
+      "observed_commit": "",
+      "status": "missing-checkout"
+    },
+    {
+      "path": "referances/donors/aloha-platforms/Platforms/OpensslPkg/Library/OpensslLib/openssl/fuzz/corpora",
+      "expected_commit": "ce771805c094d098c25a218bc8e9f7344eccbc5a",
+      "observed_commit": "",
+      "status": "missing-checkout"
+    },
+    {
+      "path": "referances/donors/aloha-platforms/Platforms/OpensslPkg/Library/OpensslLib/openssl/gost-engine",
+      "expected_commit": "74b1f4fddbc2d6de969815b1992ddc1ae7c643fe",
+      "observed_commit": "",
+      "status": "missing-checkout"
+    },
+    {
+      "path": "referances/donors/aloha-platforms/Platforms/OpensslPkg/Library/OpensslLib/openssl/krb5",
+      "expected_commit": "784c38f50e70a739400cdd3f2620bac2e2788e6c",
+      "observed_commit": "",
+      "status": "missing-checkout"
+    },
+    {
+      "path": "referances/donors/aloha-platforms/Platforms/OpensslPkg/Library/OpensslLib/openssl/oqs-provider",
+      "expected_commit": "7bc597c04b534ddea9b6654481deb31ded8e1bbc",
+      "observed_commit": "",
+      "status": "missing-checkout"
+    },
+    {
+      "path": "referances/donors/aloha-platforms/Platforms/OpensslPkg/Library/OpensslLib/openssl/pkcs11-provider",
+      "expected_commit": "898b1079d95453dc5d0f378dd15a75b99252caf3",
+      "observed_commit": "",
+      "status": "missing-checkout"
+    },
+    {
+      "path": "referances/donors/aloha-platforms/Platforms/OpensslPkg/Library/OpensslLib/openssl/pyca-cryptography",
+      "expected_commit": "7e33b0e7739d633c77b8c478620167f693ed13f4",
+      "observed_commit": "",
+      "status": "missing-checkout"
+    },
+    {
+      "path": "referances/donors/aloha-platforms/Platforms/OpensslPkg/Library/OpensslLib/openssl/python-ecdsa",
+      "expected_commit": "4096fa01715929e08b97e73f3173aee9d57f2a3f",
+      "observed_commit": "",
+      "status": "missing-checkout"
+    },
+    {
+      "path": "referances/donors/aloha-platforms/Platforms/OpensslPkg/Library/OpensslLib/openssl/tlsfuzzer",
+      "expected_commit": "61f45d9701294fd87ef92d2a7e3dfb076653a562",
+      "observed_commit": "",
+      "status": "missing-checkout"
+    },
+    {
+      "path": "referances/donors/aloha-platforms/Platforms/OpensslPkg/Library/OpensslLib/openssl/tlslite-ng",
+      "expected_commit": "77ef321dde1a9e6bcf94d73c80f8789a770d8031",
+      "observed_commit": "",
+      "status": "missing-checkout"
+    },
+    {
+      "path": "referances/donors/aloha-platforms/Platforms/OpensslPkg/Library/OpensslLib/openssl/wycheproof",
+      "expected_commit": "2196000605e45d91097147c9c71f26b72af58003",
+      "observed_commit": "",
+      "status": "missing-checkout"
+    },
+    {
+      "path": "referances/donors/aloha-platforms/Platforms/SurfaceDuoACPI",
+      "expected_commit": "d742758fe575c08b5278d84fec1b3b313551a587",
+      "observed_commit": "d742758fe575c08b5278d84fec1b3b313551a587",
+      "status": "exact-checkout"
+    },
+    {
+      "path": "referances/donors/aloha-platforms/Platforms/SurfaceDuoACPI/QcomACPI",
+      "expected_commit": "37436d47fd6b9f71d24790144095498435b4eb6e",
+      "observed_commit": "",
+      "status": "missing-checkout"
+    }
+  ],
+  "exact": 32,
+  "unresolved": 12,
+  "archive_completeness_established": false,
+  "licenses_reviewed": false,
+  "build_reproduced": false
+}

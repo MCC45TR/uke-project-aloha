@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "profile_id": "uke-global-os3.0.303.0.wozmixm-development",
+  "admission": "offline-development-only",
+  "target_codename": "uke",
+  "soc": "SM7675",
+  "stock_firmware": "OS3.0.303.0.WOZMIXM",
+  "android_release": "16.0",
+  "selected_by_owner_date": "2026-10-06",
+  "boot": {
+    "sha256": "efdee1d4e1acd7f6e77615330dbcb045caeeccad8568d89fa6abd627f606e77f",
+    "bytes": 100663296,
+    "header_version": 4,
+    "kernel_bytes": 35432960,
+    "kernel_image_bytes": 36110336,
+    "kernel_sha256": "97b2c53022e8c0bd0b279c4c592a196126a6eb0a93647c2957b39dcd5f2dc1c9",
+    "ramdisk_bytes": 0,
+    "signature_size_field": 0,
+    "embedded_vbmeta_objects": 2,
+    "partition_avb_footer": true,
+    "avb_signatures_authenticated": false
+  },
+  "installed_on_owner_device": false,
+  "kernel_entry_backend": "android-continuation-development-only",
+  "raw_uefi_firmware": null,
+  "post_firmware_android_return_backend": null,
+  "physical_ufs_geometry": null,
+  "ram_ownership_map": null,
+  "physical_trial_admitted": false,
+  "other_variants_inherit_admission": false
+}

@@ -1,0 +1,31 @@
+# SPDX-License-Identifier: MIT
+[Defines]
+  INF_VERSION = 0x0001001B
+  BASE_NAME = UkeBootDispatcher
+  FILE_GUID = c258b112-cd57-48b1-9eb7-31f15d49c4e6
+  MODULE_TYPE = UEFI_APPLICATION
+  VERSION_STRING = 0.1.0
+  ENTRY_POINT = UkeBootDispatchEntry
+
+[Sources]
+  BootDispatcher.c
+  ../../../core/gpt.c
+  ../../../core/policy.c
+  ../../../core/dispatch.c
+  ../../../core/sha256.c
+  ../../../core/fat32.c
+
+[Packages]
+  MdePkg/MdePkg.dec
+  UkeBootCorePkg.dec
+  src/platform/UkePlatformPkg/UkePlatformPkg.dec
+
+[LibraryClasses]
+  UefiApplicationEntryPoint
+
+[Protocols]
+  gUkeBootPlatformProtocolGuid
+
+[BuildOptions]
+  GCC:*_*_*_CC_FLAGS = -DUKE_EDK2
+  MSFT:*_*_*_CC_FLAGS = /DUKE_EDK2

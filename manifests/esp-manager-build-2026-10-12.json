@@ -1,0 +1,352 @@
+{
+  "schema_version": 1,
+  "record_id": "ALOHA-ESP-20261012-01",
+  "generated_utc": "2026-10-12T14:57:33Z",
+  "target": "uke",
+  "inventory_scope": "Selected reviewed working-tree source, local host tools, compiled products and scoped test logs; not complete source/dependency closure",
+  "availability": "Sources are in the current working tree; build products and raw logs are local ignored files. This record is not publication or a hardware receipt.",
+  "policy": {
+    "partition_type": "EFI System Partition",
+    "partition_name": "ESP",
+    "name_comparison": "ASCII case insensitive UTF-16 with zero padding",
+    "preferred_path": "EFI/BOOT/BOOTAA64.EFI",
+    "fallback": "Unique valid AArch64 EFI application under an immediate EFI vendor directory; optional legacy EFI/UKE/BOOT.CFG only when no automatic entry exists",
+    "multiple_managers": "Android request with ambiguous-manager",
+    "writes": false
+  },
+  "source_pins": {
+    "mu_basecore": "562c0927ef7bfc65d26d9caf322e569ccb23b6a9",
+    "mipi_sys_t": "370b5944c046bab043dd8b133727b2135af7747a",
+    "source_lock": "manifests/sec-probe-sources-2026-10-12.json",
+    "upstream_host_python_decision": "docs/MU-BUILD-DEPENDENCY.md"
+  },
+  "reviewed_sources": [
+    {
+      "path": "CMakeLists.txt",
+      "sha256": "74693bffe9b8a4044f14f668b2872f87e2e87be44d9346d6a06831a5c5eff62a"
+    },
+    {
+      "path": "UkeBootCorePkg.dec",
+      "sha256": "20aab3b7ab34c834da5c33a67aa02025fb3e3624f3f3ac755e4e25c9b36cde86"
+    },
+    {
+      "path": "include/uke/boot_core.h",
+      "sha256": "f4d710677aa99b208ac5e3fc43137a69b36f9c1c68310698089e2888757385cd"
+    },
+    {
+      "path": "src/core/gpt.c",
+      "sha256": "b2d916e3395ec553cc30dc0ce0ead59735c9ebb97662ecd6cd1d5055eae7be29"
+    },
+    {
+      "path": "src/core/policy.c",
+      "sha256": "1a05f8b7d282a9b397d6c05d139168653685730a824fec1e074b9dc43e351bd5"
+    },
+    {
+      "path": "src/core/dispatch.c",
+      "sha256": "236b05eaf5172f53b81bacddc5cdd5e7255175f7d76d837af037c57050154663"
+    },
+    {
+      "path": "src/core/fat32.c",
+      "sha256": "6dd5916e1ad6183b151c84d9531077f9bfb155bb8b95547779661a2203e84b3d"
+    },
+    {
+      "path": "src/core/sha256.c",
+      "sha256": "6f2be12c3152e08a5205fefe9a8947349b6749b4b62fc75fed976d79ad3de3e5"
+    },
+    {
+      "path": "src/host/esp_inspect.cpp",
+      "sha256": "4b41e8dc3d924f71d457c778bc0e14aa08417ba317eec14aeb0ed9cd7874168f"
+    },
+    {
+      "path": "src/platform/UkePlatformPkg/BootDispatcher/BootDispatcher.c",
+      "sha256": "65a395ce47c42e67993887f2479a1ad21f793a271906998a1b261119e372b5c4"
+    },
+    {
+      "path": "src/platform/UkePlatformPkg/BootDispatcher/BootDispatcher.inf",
+      "sha256": "e565b5df828bd8fcec46d002a7aa7c44f7cc0671d6d004dc1f4b009888569967"
+    },
+    {
+      "path": "src/platform/UkePlatformPkg/Include/Protocol/UkeBootPlatform.h",
+      "sha256": "18513f7fc5722e7a59f919b4d5840153334984dfc6f6a8b2525320315a49c3ca"
+    },
+    {
+      "path": "src/platform/UkePlatformPkg/UkeBringup.dsc",
+      "sha256": "858de3906386c3c6204b249bb59edf72b52cdb7a14d423517e58199eac759347"
+    },
+    {
+      "path": "tests/core_tests.cpp",
+      "sha256": "1ba24acbdc773982940c4ab12f2964d71e5c6586eee1871af14fac507fdc4ebb"
+    },
+    {
+      "path": "tests/fixture_disk.cpp",
+      "sha256": "5308bafa3beae7a8c81d61006ee24f35219a6d3921ac8fe45a50395e82f2befa"
+    },
+    {
+      "path": "tests/dispatch_tests.cpp",
+      "sha256": "03b78d168a6e887b72646b4f3c65412382866a259bbf614eb01dd8eb2707bfe8"
+    },
+    {
+      "path": "tests/arm64_smoke.cpp",
+      "sha256": "f1dbdcbe99758d4b235c0f3063a8b57e4b04d08648f52c75093ea0bd43ef6c94"
+    },
+    {
+      "path": "tests/efi_dispatch_tests.c",
+      "sha256": "995dd0dc265036939af1e4b5d641699b77f6c87d4148aac2bf02c2bcab834a43"
+    },
+    {
+      "path": "tests/mu_dispatch_smoke.c",
+      "sha256": "0d3ab5a705c295939c22cecb3f11cfd8965c95ec76cca17aaa70373b7106b76e"
+    },
+    {
+      "path": "tests/esp-manager-roundtrip.sh",
+      "sha256": "7f55f0db8afca7ceb954683ef8867aa0a7e61d6469aff4a45862106ecd76dc64"
+    },
+    {
+      "path": "tests/esp-roundtrip.sh",
+      "sha256": "4b8a2d848da940391bf1e4fa2d8564db6fced9b29eacb804a489830901786526"
+    },
+    {
+      "path": "scripts/build-mu-integration.sh",
+      "sha256": "1326e6f9a0de34d8d0bb5d0756163149f183176d357722f1c13af950efe787af"
+    },
+    {
+      "path": "scripts/build-efi-dispatcher.sh",
+      "sha256": "38ca1de2284569d4119f61b69567a472a12347d1fa04f7496fcd4f3d8fc83fab"
+    },
+    {
+      "path": "scripts/check-efi-dispatcher-host.sh",
+      "sha256": "325e1ef8b1ac323c9451f7fa381ad64ba0c11b0b4f639832a5c13898b0a461f5"
+    },
+    {
+      "path": "scripts/check-arm64-core.sh",
+      "sha256": "e05cf5e7088130d7584242dd6a9c91314bae39ab2f97523690ecb54f4479c895"
+    },
+    {
+      "path": "scripts/check-mu-integration-system.sh",
+      "sha256": "c72db0cc9433bea4b71b84925b50096f099a2383461ce9eb8020fa5af420e909"
+    },
+    {
+      "path": "docs/MU-BUILD-DEPENDENCY.md",
+      "sha256": "82f5b477ac6afee92a886baafc7051f70d5e37bbce368022f9e6b0049c991747"
+    }
+  ],
+  "host_tools": [
+    {
+      "id": "clang-r547379",
+      "sha256": "55d80d777d85327543868817fb836231691eae2e13030ab31a01a769a820bf2f"
+    },
+    {
+      "id": "clang++-r547379",
+      "sha256": "55d80d777d85327543868817fb836231691eae2e13030ab31a01a769a820bf2f"
+    },
+    {
+      "id": "lld-link-r547379",
+      "sha256": "55bfa2be5af6af9a3d9a17e310c501c0aca10f5431649988ed0a9a233c911652"
+    },
+    {
+      "id": "cc-host",
+      "sha256": "c3ec029249745f3249cb67144a4e098eecc0ef0a0f90dba86819119753f6c542"
+    },
+    {
+      "id": "c++-host",
+      "sha256": "c3ec029249745f3249cb67144a4e098eecc0ef0a0f90dba86819119753f6c542"
+    },
+    {
+      "id": "cmake-host",
+      "sha256": "8258a7ef6663315c3945cd71d28f8422e143cba93de80686716e5c7f6de945fa"
+    },
+    {
+      "id": "ninja-host",
+      "sha256": "c1b5448242df7722ba042e9d654e7763cdeb2630f2e319c33e768a5c1173c4d8"
+    },
+    {
+      "id": "mkfs.fat-host",
+      "sha256": "9ac3eb337efd4a341b3477d871e12a0c8e32f833582c74e78b2d928dca36a725"
+    },
+    {
+      "id": "mcopy-host",
+      "sha256": "53e648a28a781b2573b2de90f9df291e320ec275975e0e506c13f7dfaa1d151f"
+    },
+    {
+      "id": "qemu-aarch64-host",
+      "sha256": "5c0f317d36662008b032d7db89a7457956b4b350fbce014c2b001ee7cc7ed620"
+    },
+    {
+      "id": "python3.13-host",
+      "sha256": "60414e94d7722fbdaedac9bf1f576118828305011e419329f56db7d13e49fef2"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "build/esp-discovery-20261012/uke-esp-inspect",
+      "sha256": "c36a292cb482ffd28ea09be2bc6193c78307033ff26b93b7392f1de41f9d5694",
+      "bytes": 39352
+    },
+    {
+      "path": "build/esp-sanitized-20261012/uke-esp-inspect",
+      "sha256": "afcd83cfefce81714780e2f9cb0ca30376505e6558d50fdc1267a43491f3bd46",
+      "bytes": 3419992
+    },
+    {
+      "path": "build/efi-dispatcher-host/efi-dispatch-tests",
+      "sha256": "a8fcb9c2a7546718568cc2eb35a9ca3b99452f308e9d2a80b2d467799ac84a66",
+      "bytes": 3207792
+    },
+    {
+      "path": "build/arm64-fixture/uke-core-fixture",
+      "sha256": "7d33fc1a180f608cb39472ebde8e1a85ecb390ffe8166ca4c228691ad3b506ad",
+      "bytes": 20744
+    },
+    {
+      "path": "build/efi-dispatcher/UkeBootDispatcher.efi",
+      "sha256": "2ce0652e4e92290d13645566303274a3767787252f45e6aca871d1f5636c84ed",
+      "bytes": 19968
+    },
+    {
+      "path": "build/mu-integration/Build/RELEASE_CLANGPDB/AARCH64/UkeBootDispatcher.efi",
+      "sha256": "0154ad0f9cc07cffe175cd9aa4d463f5e9fe7cd9b9dec241ccd6f4337f3bca5b",
+      "bytes": 14336
+    },
+    {
+      "path": "build/mu-integration/Build/RELEASE_CLANGPDB/AARCH64/MuDispatchSmoke.efi",
+      "sha256": "7fe654a7b8076fa2cf275cd4fe3beb82c9a3bd294c3d51eb66c12411cb77744c",
+      "bytes": 4096
+    },
+    {
+      "path": "build/efi-probe/UkeEspProbe.efi",
+      "sha256": "cf634faf9a863dd29c078e0c116b526438a1b907c70e784af504de109d3a827f",
+      "bytes": 8704
+    },
+    {
+      "path": "artifacts/uke-aloha-sec-probe-20261012.zip",
+      "sha256": "5e89ddca832d2396a1594e8debf4af976f968bb941be6f439a0df4ae5af0b67d",
+      "bytes": 68109
+    }
+  ],
+  "logs": [
+    {
+      "path": "build/esp-build.log",
+      "sha256": "6443546121229d92560de45930cd2ec8e72e3dbf0481f11bb88737f2ef54df2d"
+    },
+    {
+      "path": "build/esp-ctest.log",
+      "sha256": "8fbc7f92d7ef8947627ee4844f2d98f27d4d088431f0dd7499b5469d27300fd9"
+    },
+    {
+      "path": "build/esp-sanitize-build.log",
+      "sha256": "58faf684fb6bc474487a51dcc25da8fa00d5e2f88b44a017372963be064e732d"
+    },
+    {
+      "path": "build/esp-sanitize-ctest.log",
+      "sha256": "256f76499089586f7212177a4c221aa2d1b6e6b82ff59c7701769443e885347f"
+    },
+    {
+      "path": "build/esp-manager-roundtrip.log",
+      "sha256": "43d9a4a744bf49fb5d30b22e08f40b337be391803ec3d26bb72d29623005cb08"
+    },
+    {
+      "path": "build/esp-manager-sanitized-roundtrip.log",
+      "sha256": "96b60d7b353aebf8818dac9f5a020b6d83f2ddd55c8922cb1bd4e3653f3aed0a"
+    },
+    {
+      "path": "build/esp-legacy-roundtrip.log",
+      "sha256": "42d4808ae27c944fb128f9638d5404eec50eec67269490ad435312dab1ef141c"
+    },
+    {
+      "path": "build/esp-legacy-sanitized-roundtrip.log",
+      "sha256": "42d4808ae27c944fb128f9638d5404eec50eec67269490ad435312dab1ef141c"
+    },
+    {
+      "path": "build/esp-efi-host.log",
+      "sha256": "e43da752a25ed438c979e7a8999aa33b48e03d554150ad309ca5f55d500055f6"
+    },
+    {
+      "path": "build/esp-arm64-core.log",
+      "sha256": "298536692215b2587c84d844bf03fe1e325830aa0f6a28c7f246c3c17915eb0a"
+    },
+    {
+      "path": "build/esp-efi-build.log",
+      "sha256": "e9af4e2574c34752115237b29ad60a84f223ab85ee414ce7b20158c32ab08011"
+    },
+    {
+      "path": "build/esp-mu-build.log",
+      "sha256": "7b2b483ecee4be212f2e45daf548a8978cbc933fd3ee6dbb9f15bfe0c671cf68"
+    },
+    {
+      "path": "build/esp-mu-system.log",
+      "sha256": "265eb316d004f026e950a6d2c02b5071ff2653d05228b4843674a6527da8405d"
+    },
+    {
+      "path": "build/mu-integration/integration-build.log",
+      "sha256": "203dc191ba962ee865553174c18662dbd56b6a2f23c80f2e732b076b7cb5cf5a"
+    },
+    {
+      "path": "build/mu-integration/system/present.log",
+      "sha256": "a9709a7e9c777f51c1a3c4000a7cf454e279e298dd83c5416c632b7465b6d885"
+    },
+    {
+      "path": "build/mu-integration/system/absent.log",
+      "sha256": "830118a84c38b99976c921f60e6bf1c16b9dc213329f6936bea342e1e62f2cb0"
+    },
+    {
+      "path": "build/esp-quality-check.log",
+      "sha256": "1cc6050890225b5e2870802a9cde491b34e7a30a83e83c562b511a103788ec67"
+    }
+  ],
+  "checks": {
+    "release_ctest": {
+      "passed": 13,
+      "total": 13
+    },
+    "asan_ubsan_ctest": {
+      "passed": 13,
+      "total": 13,
+      "vptr": false
+    },
+    "manager_core_assertions": 344,
+    "automatic_gpt_fat32_files": {
+      "native": 11,
+      "sanitized": 11,
+      "input_hashes_unchanged": true
+    },
+    "legacy_gpt_fat32_files": {
+      "native": 9,
+      "sanitized": 9,
+      "input_hashes_unchanged": true
+    },
+    "efi_service_mocks": {
+      "lifecycle": 7,
+      "bounded_io": 6,
+      "installed_paths": 5,
+      "launch_cases_per_path": 4,
+      "actual_manager_execution": false
+    },
+    "arm64_core_qemu_user": "passed",
+    "mu_inf_dec_dsc": "component build passed; no full firmware",
+    "standalone_arm64_efi": "passed",
+    "generic_qemu_efi": {
+      "passed": 2,
+      "scope": "Actual dispatcher missing-provider refusal and missing-image negative control; no discovered manager execution"
+    },
+    "boot_installer_readiness": {
+      "exit": 3,
+      "status": "boot-installer-zip=unavailable"
+    },
+    "standalone_quality_records": "passed; 58 documentary cases, no product/hardware acceptance"
+  },
+  "delivery": {
+    "new_zip": false,
+    "new_raw_firmware": false,
+    "frozen_sec_zip_unchanged": true,
+    "copr_upload": false,
+    "device_operation": false,
+    "physical_boot_tested": false
+  },
+  "remaining": [
+    "Complete Uke SEC/PrePi/DXE and memory/entry ownership",
+    "SM7675 UFS controller and PHY initialization",
+    "Real exact-media/partition/file provider",
+    "Post-firmware Android architecture and device restoration",
+    "Actual installed-manager resources, input and Linux handoff"
+  ]
+}

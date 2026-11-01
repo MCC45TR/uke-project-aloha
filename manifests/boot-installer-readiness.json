@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "delivery_kind": "android-kernel-dualboot-installer-zip",
+  "target": "uke",
+  "profile_id": "uke-global-os3.0.303.0.wozmixm-development",
+  "installable_zip_built": false,
+  "requirements": [
+    {"id": "profile-matched-stock-boot", "ready": true, "reason": "Owner selected OS3.0.303.0.WOZMIXM development; its 96 MiB stock boot matches the pinned SHA-256 and passes native/QEMU-user file round trips. Physical installation is not admitted."},
+    {"id": "uke-raw-firmware-payload", "ready": false, "reason": "A raw framebuffer/continuation probe and real Mu component DSC now build. Complete Uke SEC/PrePi/DXE firmware, HOB/MMU/FD/FDF and SM7675 UFS controller/PHY initialization remain incomplete; the probe is not that firmware payload."},
+    {"id": "uke-kernel-entry-selector", "ready": false, "reason": "Built Android continuation, raw context/memory libraries and a regular-file SEC probe patcher with exact Fedora/OS3 restore checks. The full firmware entry/ownership contract and physical patched boot remain unresolved."},
+    {"id": "esp-independent-android-return", "ready": false, "reason": "Built reverse driver shutdown transaction, actual GetMemoryMap/ExitBootServices adapter and final original-kernel x0-x3/SP continuation. Real per-driver quiescence and board EL/MMU/cache/interrupt/timer/DMA restoration remain incomplete; no operational firmware Android backend exists."},
+    {"id": "arm64-patcher-and-boot-repacker", "ready": false, "reason": "Built native x86_64/AArch64 v4 codec with exact SEC probe and Android continuation patch/restore checks. Full firmware insertion/relocation and post-DXE entry/return remain incomplete; no device installer backend exists."},
+    {"id": "installer-backup-and-write-backend", "ready": false, "reason": "Selected-slot backup, interruption handling, bounded write and readback remain unimplemented."}
+  ]
+}

@@ -1,0 +1,18 @@
+# SPDX-License-Identifier: MIT
+[Defines]
+  INF_VERSION = 0x0001001B
+  BASE_NAME = UkeAndroidReturnLib
+  FILE_GUID = 0af97bfa-228b-41d0-b956-0fd1ed6d78d8
+  MODULE_TYPE = BASE
+  VERSION_STRING = 0.1.0
+  LIBRARY_CLASS = UkeAndroidReturnLib
+[Sources]
+  ReturnTransaction.c
+  ExitServices.c
+[Packages]
+  MdePkg/MdePkg.dec
+  UkeBootCorePkg.dec
+  src/platform/UkePlatformPkg/UkePlatformPkg.dec
+[BuildOptions]
+  GCC:*_*_*_CC_FLAGS = -DUKE_EDK2
+  MSFT:*_*_*_CC_FLAGS = /DUKE_EDK2

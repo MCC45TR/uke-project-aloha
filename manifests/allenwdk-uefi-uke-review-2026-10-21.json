@@ -1,0 +1,190 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-21",
+  "observed_at_utc": "2026-10-21T18:53:41Z",
+  "scope": "Pinned donor review and isolated host build admission; no accepted build lock or physical status change",
+  "decision": "Useful Uke entry/GOP/DT reference; incomplete standalone firmware distribution; retain the existing Uke Aloha/Mu baseline",
+  "sources": [
+    {
+      "id": "allenwdk-uefi-uke",
+      "url": "https://github.com/Allenwdk/uefi-uke",
+      "ref": "uke",
+      "commit": "2ecc102faa922e2b5570bcf9502dfd5bdb04fa0e",
+      "tree": "9307502d6a445898bf73e4f5d93ddba6db4c6a97",
+      "path": "referances/donors/allenwdk-uefi-uke-20261021",
+      "partial_clone": true,
+      "submodules_initialized": false,
+      "tracked_clean": true,
+      "git_integrity": "connectivity-passed",
+      "archive_complete": false
+    },
+    {
+      "id": "allenwdk-unixnu",
+      "url": "https://github.com/Allenwdk/UniXNU",
+      "ref": "uke",
+      "commit": "1fb15517f498fd649dd3912481196327f76564b8",
+      "tree": "b4a539cd56c94796c768e952596f79e0bf847d40",
+      "path": "referances/donors/allenwdk-unixnu-20261021",
+      "partial_clone": true,
+      "submodules_initialized": false,
+      "tracked_clean": true,
+      "git_integrity": "connectivity-passed",
+      "archive_complete": false
+    },
+    {
+      "id": "allenwdk-unixnu-uke",
+      "url": "https://github.com/Allenwdk/UniXNU-uke",
+      "ref": "main",
+      "commit": "6658251a49b1c5c8b5887f3bc34f36f0b2eeac97",
+      "tree": "92001d121dfa9b735416a9cf367bf82542e3c1a1",
+      "path": "referances/donors/allenwdk-unixnu-uke-20261021",
+      "partial_clone": true,
+      "submodules_initialized": false,
+      "tracked_clean": true,
+      "git_integrity": "connectivity-passed",
+      "archive_complete": false
+    },
+    {
+      "id": "unixnu-darwinboot",
+      "url": "https://github.com/UniXNU/DarwinBoot",
+      "ref": "UniXNU gitlink",
+      "commit": "85332b317ee80898fc78939ea64e6ca52d3837a3",
+      "tree": "f9ca0efc622b21168751fc345483165d0110708a",
+      "path": "referances/donors/unixnu-darwinboot-20261021",
+      "partial_clone": true,
+      "submodules_initialized": false,
+      "tracked_clean": true,
+      "git_integrity": "connectivity-passed",
+      "archive_complete": false
+    }
+  ],
+  "comparison": {
+    "default_main": "6c6755012728c9f7de748228758bad94d1e9a660",
+    "uke_ahead_of_main": 7,
+    "changed_files": 20,
+    "insertions": 1550,
+    "deletions": 1,
+    "retained_mu_silicium": "3aa95a72d469234755e2bcf2841ec6c0e83863e9",
+    "live_mu_silicium": "42fe563791e51bf5500c2e470ed294ca0c94b97c",
+    "live_aloha": "0b79812897177e9fdd1fb8cb02f05f5338322541",
+    "live_aloha_parent_tree_entries": 26490,
+    "live_aloha_named_uke_platform": false,
+    "declared_binaries": "a1501e0c2e642d6ac0d8f52c85af2a67b75a7799",
+    "binaries_tree_entries": 29526,
+    "binaries_tree_truncated": false,
+    "binaries_uke_directory": false
+  },
+  "host_build_dependencies": [
+    {
+      "id": "mu-basecore",
+      "commit": "cfb93724a06ff86ff5ba971413368a7809ee42a5",
+      "archive_sha256": "fddef5a195e8b947579e35726830cfb72ae562a877f77854280d6d6ce3e9d826"
+    },
+    {
+      "id": "mu-plus",
+      "commit": "b8d46c71610318e36a661819e1e3c0b8bdda413a",
+      "archive_sha256": "ea61ffca35c1464504dad5dcc54edf2234299bc84fcaa1da85b48c1af0d349e3"
+    },
+    {
+      "id": "mu-oem-sample",
+      "commit": "b70b4b7bb02c43bf9db2172dfb3ed0457e2361d6",
+      "archive_sha256": "11cc26d961a8cedd70da1895a7c1b9b9bc7946c90bbf148cbe1756d457f9d1c4"
+    },
+    {
+      "id": "silicium-acpi",
+      "commit": "2d465ad77c25de908f0ec7bdfcb57f865b61233c",
+      "archive_sha256": "83275524c1c3e87fc32794dbc13c70197005119355ef1a224c597c7127355adf"
+    },
+    {
+      "id": "mipi-sys-t",
+      "commit": "370b5944c046bab043dd8b133727b2135af7747a",
+      "source": "Existing unchanged project host import"
+    }
+  ],
+  "host_environment": {
+    "architecture": "x86_64",
+    "distribution": "Fedora Rawhide",
+    "kernel": "7.3.0-0.rc7.261016g2f2f7eeef8b0.62.fc46.x86_64",
+    "clang": "Android r547379, Clang 20.0.0",
+    "python": "3.13.16",
+    "python_sha256": "60414e94d7722fbdaedac9bf1f576118828305011e419329f56db7d13e49fef2",
+    "python_scope": "Unmodified pinned EDK II BaseTools metadata processing on host only; no practical replacement for DSC/INF/DEC/FDF admission"
+  },
+  "tests": [
+    {
+      "name": "BootShim AArch64 assembly",
+      "status": "passed",
+      "bytes": 192,
+      "sha256": "f7ee5e091c70ece86710bcc99256974a66b41134b5b07d77ceea2cfa9f758d16",
+      "header_assertions": 4,
+      "relocations": 0,
+      "undefined_named_symbols": 0,
+      "execution": false
+    },
+    {
+      "name": "Initial metadata setup",
+      "status": "failed-then-corrected",
+      "reason": "Declared Silicium-ACPI package paths were not initialized",
+      "log": "build/allenwdk-review-20261021/metadata-build-first.log",
+      "log_sha256": "e361e9766adfef719e07ffc3a906584372e481af293424bfa4e01bfa91586ea2"
+    },
+    {
+      "name": "Standalone exact Mu metadata build",
+      "status": "failed",
+      "exit_code": 14,
+      "reason": "uke.dsc:83 cannot resolve UniXNUPkg/Library/UniXNULib/UniXNULib.inf",
+      "log": "build/allenwdk-review-20261021/metadata-build-standalone.log",
+      "log_sha256": "cdfa0528d5929c97b4da6b9840649f492a120d09fbb8da036f6783cec97dc384"
+    },
+    {
+      "name": "Extended build with pinned UniXNU and DarwinBoot packages",
+      "status": "failed",
+      "exit_code": 14,
+      "reason": "Unconditional missing Binaries/uke/RawFiles/SecParti.cfg",
+      "log": "build/allenwdk-review-20261021/metadata-build-extended.log",
+      "log_sha256": "8a755bd762dccb0804336f1ba4f9e56b07293b6991eb00cd7e92df19fff3fda8",
+      "secure_boot_define": 1,
+      "defines_source": "UniXNU-uke board.toml; build setting only, not a trust qualification",
+      "firmware_fd_produced": false
+    },
+    {
+      "name": "Unaligned initrd arithmetic counterexample",
+      "status": "confirmed-source-arithmetic",
+      "start": "0x1001",
+      "end": "0x1200",
+      "bytes": 511,
+      "last_block": "0xffffffffffffffff",
+      "driver_execution": false
+    }
+  ],
+  "unresolved": [
+    "Uke SecParti.cfg provenance and source closure",
+    "Missing Resources/DTBs/uke.dtb for the standalone packaging route",
+    "Remaining nested dependency closure and native full build are unqualified",
+    "Early ownership of FD, stack, DTB and initrd",
+    "FDT parser bounds, reservation completeness and initrd failure handling",
+    "Uke-qualified SMMU and GOP takeover",
+    "Firmware UFS, physical keys, USB HID and touch",
+    "Linux EFI/DT/dracut boot and Android restoration"
+  ],
+  "record_validation": {
+    "json": "passed",
+    "new_lesson_relative_links": "passed",
+    "proposed_index_privacy_and_whitespace": "passed for both producing repositories; real indexes unchanged",
+    "quality_structure": "passed",
+    "full_quality": "failed on pre-existing AGENTS.md evidence hash mismatch; no unrelated hashes refreshed"
+  },
+  "boundaries": {
+    "donor_scripts_executed": false,
+    "donor_binaries_executed": false,
+    "upstream_basetools_executed_on_host": true,
+    "bootshim_executed": false,
+    "firmware_built": false,
+    "qemu_tested": false,
+    "tablet_touched": false,
+    "flashed": false,
+    "accepted_source_lock_changed": false,
+    "physical_support_changed": false,
+    "published": false
+  }
+}
